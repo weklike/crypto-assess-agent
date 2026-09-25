@@ -1,0 +1,27 @@
+# 测试用模拟被测系统（自拟，基于 fixtures 仿标准）。正式评测用的系统放在 eval/datasets/systems/，由仓库所有者编写。
+id: fixture-01
+name: 仿营销业务系统
+level: 3
+scenario: 通用
+description: 对外提供营销活动管理的 Web 系统，客户信息保存在自建数据库中。
+objects:
+  - key: db
+    layer: 应用和数据
+    name: 客户信息数据库
+    description: MySQL 数据库，保存客户身份证号和手机号
+    measures:
+      storage:
+        - algorithm: AES-256-GCM
+          evidence: 应用层对身份证号字段加密
+  - key: vpn
+    layer: 网络和通信
+    name: 远程运维 VPN
+    description: 运维人员通过 VPN 接入内网
+    measures:
+      transport:
+        - protocol: IPSec
+          algorithm: SM4
+          product: 国密 IPSec VPN 网关
+expected:
+  - {object: db, clause_ref: "FIX/T 0001-2026#5.4.3", judgment: 不符合}
+  - {object: vpn, clause_ref: "FIX/T 0001-2026#5.2.5", judgment: 部分符合}

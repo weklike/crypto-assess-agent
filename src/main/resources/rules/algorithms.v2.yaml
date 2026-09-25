@@ -1,0 +1,180 @@
+# 算法合规规则表 v2
+#
+# 与 v1 的区别：合规结论（status、basis、clause_refs）与 v1 完全相同（v1 已由仓库所有者核对）；
+# 本版为非认可 / 不安全算法新增安全强度，供《商用密码应用安全性评估量化评估规则（2023 版）》表 2 的 Ra 取值：
+#   Ra = 0.2（安全强度 < 80 比特）/ 0.5（80–111 比特）/ 1（≥ 112 比特），阈值写在 rules/scoring.v2.yaml。
+# 安全强度参照 NIST SP 800-57 Part 1 Rev.5 的等效强度表（对称 / RSA、DH / ECC / 杂凑抗碰撞）；
+# 杂凑算法取抗碰撞强度，已被实际攻破的取公开攻击复杂度（MD5 约 2^18、SHA-1 约 2^63），RC4 取 0。
+# security_bits 是写法里没有密钥位数（或位数不在 security_bits_by_key 中）时使用的保守值。
+# 未给出安全强度的算法（如 HMAC-MD5），Ra 需要测评人员在复核时填写。
+# 字段说明：
+#   - status：APPROVED（认可的商用密码算法）/ NOT_APPROVED（非认可算法）/ INSECURE（已知不安全）
+#   - basis：判定依据的文字说明
+#   - clause_refs：对应的标准条款引用（格式 标准号#条款号）
+#   - security_bits / security_bits_by_key：安全强度（比特）
+# 修改结论时新建 algorithms.v3.yaml，不要改已发布的版本；代码不对任何算法做判断；结构不合法时应用启动失败。
+version: v2
+# 已由仓库所有者核对（2026-09-25）
+reviewed: true
+reviewed_by: ""
+
+algorithms:
+  # ---- 商用密码算法（APPROVED） ----
+  - name: SM1
+    category: block_cipher
+    aliases: [SM1, 国密SM1]
+    status: APPROVED
+    basis: 商用密码分组算法（算法不公开，仅以硬件形式提供）
+  - name: SM2
+    category: public_key
+    aliases: [SM2, 国密SM2, SM2DSA, SM2PKE]
+    status: APPROVED
+    basis: 商用密码椭圆曲线公钥密码算法，用于数字签名、密钥交换和公钥加密
+  - name: SM3
+    category: hash
+    aliases: [SM3, 国密SM3]
+    status: APPROVED
+    basis: 商用密码杂凑算法
+  - name: SM4
+    category: block_cipher
+    aliases: [SM4, SMS4, 国密SM4]
+    status: APPROVED
+    basis: 商用密码分组算法
+  - name: SM7
+    category: block_cipher
+    aliases: [SM7, 国密SM7]
+    status: APPROVED
+    basis: 商用密码分组算法（主要用于非接触式卡）
+  - name: SM9
+    category: public_key
+    aliases: [SM9, 国密SM9]
+    status: APPROVED
+    basis: 商用密码标识密码算法
+  - name: ZUC
+    category: stream_cipher
+    aliases: [ZUC, 祖冲之, 祖冲之算法]
+    status: APPROVED
+    basis: 商用密码序列密码算法
+  - name: HMAC-SM3
+    category: mac
+    aliases: [HMAC-SM3, HMACSM3]
+    status: APPROVED
+    basis: 基于 SM3 的消息鉴别码
+
+  # ---- 非认可算法（NOT_APPROVED） ----
+  - name: AES
+    category: block_cipher
+    aliases: [AES, RIJNDAEL]
+    status: NOT_APPROVED
+    basis: 非商用密码算法，密评中其保护通常不被认可
+    security_bits: 128
+    security_bits_by_key: {128: 128, 192: 192, 256: 256}
+  - name: 3DES
+    category: block_cipher
+    aliases: [3DES, TDEA, DESEDE, TRIPLEDES, DES3]
+    status: NOT_APPROVED
+    basis: 非商用密码算法，且分组长度短
+    security_bits: 80
+    security_bits_by_key: {112: 80, 168: 112}
+  - name: RSA
+    category: public_key
+    aliases: [RSA]
+    status: NOT_APPROVED
+    basis: 非商用密码算法
+    security_bits: 80
+    security_bits_by_key: {1024: 80, 2048: 112, 3072: 128, 7680: 192, 15360: 256}
+  - name: ECDSA
+    category: signature
+    aliases: [ECDSA]
+    status: NOT_APPROVED
+    basis: 非商用密码算法
+    security_bits: 128
+    security_bits_by_key: {224: 112, 256: 128, 384: 192, 521: 256}
+  - name: DSA
+    category: signature
+    aliases: [DSA]
+    status: NOT_APPROVED
+    basis: 非商用密码算法
+    security_bits: 80
+    security_bits_by_key: {1024: 80, 2048: 112, 3072: 128}
+  - name: Ed25519
+    category: signature
+    aliases: [ED25519, EDDSA]
+    status: NOT_APPROVED
+    basis: 非商用密码算法
+    security_bits: 128
+  - name: ECDH
+    category: key_exchange
+    aliases: [ECDH, ECDHE, X25519]
+    status: NOT_APPROVED
+    basis: 非商用密码密钥交换算法
+    security_bits: 128
+    security_bits_by_key: {224: 112, 256: 128, 384: 192, 521: 256}
+  - name: DH
+    category: key_exchange
+    aliases: [DH, DHE, DIFFIEHELLMAN]
+    status: NOT_APPROVED
+    basis: 非商用密码密钥交换算法
+    security_bits: 80
+    security_bits_by_key: {1024: 80, 2048: 112, 3072: 128}
+  - name: SHA-256
+    category: hash
+    aliases: [SHA-256, SHA256, SHA2, SHA-2, SHA-224, SHA224]
+    status: NOT_APPROVED
+    basis: 非商用密码杂凑算法
+    security_bits: 112
+  - name: SHA-512
+    category: hash
+    aliases: [SHA-512, SHA512, SHA-384, SHA384]
+    status: NOT_APPROVED
+    basis: 非商用密码杂凑算法
+    security_bits: 192
+  - name: SHA-3
+    category: hash
+    aliases: [SHA-3, SHA3]
+    status: NOT_APPROVED
+    basis: 非商用密码杂凑算法
+    security_bits: 112
+  - name: HMAC-SHA256
+    category: mac
+    aliases: [HMAC-SHA256, HMACSHA256, HMAC-SHA2]
+    status: NOT_APPROVED
+    basis: 基于非商用密码杂凑算法的消息鉴别码
+    security_bits: 128
+  - name: ChaCha20
+    category: stream_cipher
+    aliases: [CHACHA20, CHACHA20-POLY1305]
+    status: NOT_APPROVED
+    basis: 非商用密码算法
+
+  # ---- 已知不安全（INSECURE） ----
+    security_bits: 256
+  - name: DES
+    category: block_cipher
+    aliases: [DES]
+    status: INSECURE
+    basis: 密钥长度不足，已知不安全
+    security_bits: 56
+  - name: RC4
+    category: stream_cipher
+    aliases: [RC4, ARCFOUR, ARC4]
+    status: INSECURE
+    basis: 已知存在严重偏差，不安全
+    security_bits: 0
+  - name: MD5
+    category: hash
+    aliases: [MD5]
+    status: INSECURE
+    basis: 已被证明不抗碰撞
+    security_bits: 18
+  - name: SHA-1
+    category: hash
+    aliases: [SHA-1, SHA1]
+    status: INSECURE
+    basis: 已被实际碰撞攻击
+    security_bits: 63
+  - name: HMAC-MD5
+    category: mac
+    aliases: [HMAC-MD5, HMACMD5]
+    status: INSECURE
+    basis: 基于 MD5

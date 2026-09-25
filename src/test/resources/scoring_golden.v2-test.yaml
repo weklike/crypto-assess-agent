@@ -1,0 +1,120 @@
+# 按 rules/scoring.v2.test.yaml（《量化评估规则（2023 版）》结构 + fixtures 仿标准条款映射）手算的测试用例。
+# 对象得分按表 1（D/A/K），测评单元 = 对象平均，层面 = 单元按等级权重加权平均（保留 4 位），
+# 总分 = 70 × 技术组层面加权平均（10/20/10/30）+ 30 × 管理组层面加权平均（8/8/8/6），保留 2 位。
+format: scoring-golden-v2
+cases:
+  - id: g01 技术与管理都符合
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "100.00"
+    layers: {应用和数据: "1.0000", 管理制度: "1.0000"}
+  - id: g02 D 不满足且管理不符合
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: false}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 不符合}
+    total: "0.00"
+  - id: g03 A 不满足 Ra=0.5，管理部分符合（70×0.25 + 30×0.5）
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: false, k: true, ra: "0.5"}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 部分符合}
+    total: "32.50"
+    objects: {db: "0.2500"}
+  - id: g04 A、K 都不满足 Ra=0.5 Rk=1（0.25×0.5×1 = 0.125）
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: false, k: false, ra: "0.5", rk: "1"}
+      - {object: org, layer: 应急处置, clause_ref: "FIX/T 0001-2026#6.4.1", judgment: 符合}
+    total: "38.75"
+    layers: {应用和数据: "0.1250"}
+  - id: g05 K 不满足 Rk=1.2（0.5×1.2 = 0.6）
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: false, rk: "1.2"}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "72.00"
+  - id: g06 两个技术层面按 20/30 加权（(20×1 + 30×0)/50 = 0.4）
+    level: 3
+    findings:
+      - {object: vpn, layer: 网络和通信, clause_ref: "FIX/T 0001-2026#5.2.1", d: true, a: true, k: true}
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: false}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "58.00"
+    layers: {网络和通信: "1.0000", 应用和数据: "0.0000"}
+  - id: g07 层面内单元按第三级权重加权（1×1 + 0.7×0）/1.7
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.4", d: false}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "71.17"
+    layers: {应用和数据: "0.5882"}
+    units: {应用和数据|重要数据存储机密性: "1.0000", 应用和数据|重要数据存储完整性: "0.0000"}
+  - id: g08 同一单元两个对象取平均（(1 + 0.5×0.2)/2 = 0.55）
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: cache, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: false, k: true, ra: "0.2"}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 部分符合}
+    total: "53.50"
+    units: {应用和数据|重要数据存储机密性: "0.5500"}
+    objects: {db: "1.0000", cache: "0.1000"}
+  - id: g09 第一级不评价不可否认性
+    level: 1
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.5", d: false}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "100.00"
+  - id: g10 不适用不参与计算
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.4", judgment: 不适用}
+      - {object: org, layer: 应急处置, clause_ref: "FIX/T 0001-2026#6.4.1", judgment: 部分符合}
+    total: "85.00"
+  - id: g11 管理组全部不适用，不出总分
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 不适用}
+    total: null
+    total_note: 分母为 0
+    layers: {应用和数据: "1.0000", 管理制度: null}
+  - id: g12 管理组三个层面按 8/8/6 加权（(8×1 + 8×0 + 6×0.5)/22 = 0.5）
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+      - {object: org, layer: 人员管理, clause_ref: "FIX/T 0001-2026#6.2.1", judgment: 不符合}
+      - {object: org, layer: 应急处置, clause_ref: "FIX/T 0001-2026#6.4.1", judgment: 部分符合}
+    total: "85.00"
+  - id: g13 通用要求不单独评价
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#4.1", d: false}
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: true, k: true}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "100.00"
+  - id: g14 A 不满足但缺 Ra，报错不猜
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: false, k: true}
+    error: Ra is required
+  - id: g15 未映射条款按标题匹配测评单元
+    level: 3
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#9.9", clause_title: 重要数据传输机密性, d: true, a: true, k: true}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "100.00"
+    units: {应用和数据|重要数据传输机密性: "1.0000"}
+  - id: g16 第四级 A、K 都不满足 Ra=0.2 Rk=1.5（0.25×0.2×1.5 = 0.075）
+    level: 4
+    findings:
+      - {object: db, layer: 应用和数据, clause_ref: "FIX/T 0001-2026#5.4.3", d: true, a: false, k: false, ra: "0.2", rk: "1.5"}
+      - {object: org, layer: 管理制度, clause_ref: "FIX/T 0001-2026#6.1.1", judgment: 符合}
+    total: "35.25"
+    objects: {db: "0.0750"}

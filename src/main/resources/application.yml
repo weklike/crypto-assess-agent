@@ -1,0 +1,165 @@
+spring:
+  application:
+    name: crypto-assess-agent
+
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/crypto_assess}
+    username: ${MYSQL_USER:crypto_assess}
+    password: ${MYSQL_PASSWORD:}
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+  ai:
+    # 调用链里不记录提示词和回答原文
+    chat:
+      observations:
+        log-prompt: false
+        log-completion: false
+      client:
+        observations:
+          log-prompt: false
+          log-completion: false
+    mcp:
+      server:
+        name: crypto-assess-mcp
+        version: 0.1.0
+        type: SYNC
+        protocol: STREAMABLE
+        request-timeout: 30s
+        capabilities:
+          tool: true
+          resource: false
+          prompt: false
+          completion: false
+    # Spring AI 自带的 RetryTemplate 默认重试 10 次；约定不做隐藏重试
+    retry:
+      max-attempts: 1
+    # OpenAI 与 Ollama 两个 starter 都会默认注册 ChatModel / EmbeddingModel；
+    # 在这里显式指定：对话走 OpenAI 兼容接口，向量走 Ollama，其余能力不启用
+    model:
+      chat: openai
+      embedding: ollama
+      image: none
+      audio:
+        speech: none
+        transcription: none
+      moderation: none
+    openai:
+      # base-url 为空时回退到 OpenAI 官方地址；api-key 为空字符串时是免鉴权模式，
+      # 应用能启动，调用时由服务端返回鉴权错误
+      base-url: ${LLM_BASE_URL:}
+      api-key: ${LLM_API_KEY:}
+      # SDK 的 HTTP 超时只是兜底上限，要大于各业务的调用超时（QA_TIMEOUT、JUDGE_TIMEOUT），以业务超时为准；
+      # 每次请求的超时由 LlmRequestOptions 设成同一个值（OpenAiChatOptions 默认 60 s 且不能配置）
+      timeout: ${LLM_HTTP_TIMEOUT:540s}
+      # SDK 默认重试 3 次；按约定不做隐藏重试
+      max-retries: 0
+      chat:
+        model: ${LLM_MODEL:gpt-5-mini}
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      embedding:
+        model: ${EMBED_MODEL:bge-m3}
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
+    consumer:
+      auto-offset-reset: earliest
+    listener:
+      # 只有 INGEST_MODE=kafka 时才有监听器
+      missing-topics-fatal: false
+
+  mvc:
+    # 框架层错误（请求体无法解析、方法不支持等）也返回 ProblemDetail
+    problemdetails:
+      enabled: true
+
+  elasticsearch:
+    uris: ${ES_URIS:http://localhost:9200}
+    connection-timeout: 5s
+    socket-timeout: 30s
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    # record 通过构造器参数名映射（Boot 的 parent 已开启 -parameters）
+    arg-name-based-constructor-auto-mapping: true
+
+management:
+  tracing:
+    # 追踪默认关闭；接 Langfuse 时设 TRACING_ENABLED=true 并配置 LANGFUSE_*
+    enabled: ${TRACING_ENABLED:false}
+    sampling:
+      probability: 1.0
+  otlp:
+    metrics:
+      export:
+        # 只导出调用链，不推送指标
+        enabled: false
+
+app:
+  tracing:
+    langfuse:
+      endpoint: ${LANGFUSE_OTLP_ENDPOINT:}
+      public-key: ${LANGFUSE_PUBLIC_KEY:}
+      secret-key: ${LANGFUSE_SECRET_KEY:}
+  pricing:
+    # 模型:输入单价:输出单价;…（元/百万 tokens）
+    table: ${PRICE_TABLE:}
+  ingest:
+    # sync：接口内同步入库；kafka：需要 mq profile 的 Kafka，接口返回 202
+    mode: ${INGEST_MODE:sync}
+    backoff-initial: 1s
+    max-retries: 3
+    send-timeout: 10s
+  rate-limit:
+    enabled: ${RATE_LIMIT_ENABLED:true}
+    capacity: ${RATE_LIMIT_CAPACITY:20}
+    refill-per-second: ${RATE_LIMIT_REFILL_PER_SECOND:0.2}
+  security:
+    # 格式 客户端:密钥:scope1,scope2;…（scope：kb:read / rules:read / admin）
+    api-keys: ${MCP_API_KEYS:}
+  workflow:
+    supplement-k: 2
+    supplement-mode: hybrid
+    resume-on-startup: ${WORKFLOW_RESUME_ON_STARTUP:true}
+  judge:
+    timeout: ${JUDGE_TIMEOUT:240s}
+    temperature: 0.0
+  rules:
+    # v1 保留用于复现旧结果；v2 新增安全强度（Ra）并按量化评估规则（2023 版）评分
+    algorithms: classpath:rules/algorithms.v2.yaml
+    scoring: classpath:rules/scoring.v2.yaml
+  knowledge:
+    normalized-dir: ${KB_NORMALIZED_DIR:data/normalized}
+  health:
+    timeout: 5s
+  embedding:
+    model: ${EMBED_MODEL:bge-m3}
+    dimensions: 1024
+    batch-size: ${EMBED_BATCH_SIZE:16}
+    timeout: ${EMBED_TIMEOUT:60s}
+    cache:
+      enabled: ${EMBED_CACHE_ENABLED:true}
+      ttl: ${EMBED_CACHE_TTL:30d}
+  rerank:
+    base-url: ${RERANK_BASE_URL:http://localhost:8081}
+    model: ${RERANK_MODEL:BAAI/bge-reranker-v2-m3}
+    timeout: ${RERANK_TIMEOUT:180s}
+    top-n: 30
+  qa:
+    top-k: 6
+    mode: hybrid_rerank
+    timeout: ${QA_TIMEOUT:60s}
+    prompt-version: qa-answer.v2
+  retrieval:
+    index-alias: kb_clause
+    candidates: 50
+    num-candidates: 200
+    rrf-k: 60
+    # 占位值，T09 用问答评测结果校准后写入 decisions.md
+    refuse-threshold: ${QA_REFUSE_THRESHOLD:0.1}

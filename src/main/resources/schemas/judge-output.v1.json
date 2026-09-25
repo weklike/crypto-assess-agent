@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["judgment", "evidence", "missing_info", "rationale", "remediation", "clause_refs", "relevant_algorithms"],
+  "properties": {
+    "judgment": { "type": "string", "enum": ["符合", "部分符合", "不符合", "不适用"] },
+    "evidence": { "type": "string", "maxLength": 2000 },
+    "missing_info": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 300 } },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "remediation": { "type": "string", "maxLength": 2000 },
+    "clause_refs": { "type": "array", "minItems": 1, "maxItems": 10, "items": { "type": "string", "maxLength": 128 } },
+    "relevant_algorithms": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 64 } }
+  }
+}

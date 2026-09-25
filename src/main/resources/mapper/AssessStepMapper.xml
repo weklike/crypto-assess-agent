@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.assessment.AssessStepMapper">
+
+    <sql id="columns">
+        id, project_id, object_id, step, step_key, status, attempts, output_json, error, started_at, finished_at
+    </sql>
+
+    <select id="findByProject" resultType="com.cryptoassess.assessment.AssessStep">
+        SELECT <include refid="columns"/> FROM assess_step WHERE project_id = #{projectId} ORDER BY id
+    </select>
+
+    <select id="find" resultType="com.cryptoassess.assessment.AssessStep">
+        SELECT <include refid="columns"/> FROM assess_step
+        WHERE project_id = #{projectId} AND object_id = #{objectId} AND step = #{step} AND step_key = #{stepKey}
+    </select>
+
+    <insert id="start">
+        INSERT INTO assess_step (project_id, object_id, step, step_key, status, attempts, started_at)
+        VALUES (#{projectId}, #{objectId}, #{step}, #{stepKey}, 'RUNNING', 1, CURRENT_TIMESTAMP(3))
+        ON DUPLICATE KEY UPDATE status = 'RUNNING', attempts = attempts + 1, error = NULL,
+                                started_at = CURRENT_TIMESTAMP(3), finished_at = NULL
+    </insert>
+
+    <update id="succeed">
+        UPDATE assess_step SET status = 'SUCCEEDED', output_json = #{outputJson}, error = NULL,
+                               finished_at = CURRENT_TIMESTAMP(3)
+        WHERE project_id = #{projectId} AND object_id = #{objectId} AND step = #{step} AND step_key = #{stepKey}
+    </update>
+
+    <update id="fail">
+        UPDATE assess_step SET status = 'FAILED', error = #{error}, finished_at = CURRENT_TIMESTAMP(3)
+        WHERE project_id = #{projectId} AND object_id = #{objectId} AND step = #{step} AND step_key = #{stepKey}
+    </update>
+
+    <delete id="deleteByObject">
+        DELETE FROM assess_step WHERE object_id = #{objectId}
+    </delete>
+
+    <update id="failRunning">
+        UPDATE assess_step SET status = 'FAILED', error = #{error}, finished_at = CURRENT_TIMESTAMP(3)
+        WHERE project_id = #{projectId} AND status = 'RUNNING'
+    </update>
+
+</mapper>

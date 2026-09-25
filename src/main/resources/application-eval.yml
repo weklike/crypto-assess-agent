@@ -1,0 +1,12 @@
+# 评测 profile：不启动 Web 服务，跑完一个 suite 或工具后退出（退出码 0 完成，1 失败）。
+# 用法见 docs/实施计划.md T07：--eval.suite=retrieval --eval.dataset=v1
+spring:
+  main:
+    web-application-type: none
+  config:
+    import: optional:file:.env[.properties]
+
+eval:
+  results-dir: eval/results
+  datasets-dir: eval/datasets
+  dataset: v1

@@ -1,0 +1,123 @@
+# 本地开发环境。在仓库根目录执行：
+#   docker compose --env-file .env -f deploy/compose.yaml --profile core up -d
+# compose 只会自动读取 compose 文件所在目录（deploy/）下的 .env，根目录的 .env 需要用 --env-file 指定。
+# 所有端口只绑定 127.0.0.1；ES 关闭了安全认证，只能在本机使用。
+name: crypto-assess
+
+services:
+  mysql:
+    profiles: [core]
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: crypto_assess
+      MYSQL_USER: ${MYSQL_USER:-crypto_assess}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD is not set, run with --env-file .env}
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      TZ: UTC
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci"]
+    ports: ["127.0.0.1:3306:3306"]
+    volumes: [mysql-data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  redis:
+    profiles: [core]
+    image: redis:7
+    command: ["redis-server", "--appendonly", "yes"]
+    ports: ["127.0.0.1:6379:6379"]
+    volumes: [redis-data:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  elasticsearch:
+    profiles: [core]
+    build:
+      context: ./elasticsearch
+    image: crypto-assess/elasticsearch-ik:9.4.5
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: -Xms1g -Xmx1g
+    ports: ["127.0.0.1:9200:9200"]
+    volumes: [es-data:/usr/share/elasticsearch/data]
+    ulimits:
+      memlock: {soft: -1, hard: -1}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fs 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s' >/dev/null"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 30s
+
+  ollama:
+    profiles: [core]
+    image: ollama/ollama:${OLLAMA_IMAGE_TAG:-0.34.4}
+    # 首次启动后拉取模型：docker compose -f deploy/compose.yaml exec ollama ollama pull bge-m3
+    ports: ["127.0.0.1:11434:11434"]
+    volumes: [ollama-data:/root/.ollama]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  tei-rerank:
+    profiles: [core]
+    image: ghcr.io/huggingface/text-embeddings-inference:${TEI_IMAGE_TAG:-cpu-1.8}
+    # TEI_MODEL_ID 默认从 Hugging Face 下载；网络不通时可先把模型放进 tei-data 卷，
+    # 再把 TEI_MODEL_ID 设为卷内快照目录（/data/models--BAAI--bge-reranker-v2-m3/snapshots/<revision>）离线启动
+    # CPU 上预热会按 max-batch-tokens 分配内存，默认 16384 在 12 GB 内存的机器上会吃掉约 10 GB，这里调小
+    command: ["--model-id", "${TEI_MODEL_ID:-BAAI/bge-reranker-v2-m3}", "--port", "80",
+              "--max-batch-tokens", "${TEI_MAX_BATCH_TOKENS:-4096}", "--auto-truncate"]
+    environment:
+      # 访问 huggingface.co 困难时可在 .env 中改为镜像站
+      HF_ENDPOINT: ${HF_ENDPOINT:-https://huggingface.co}
+    ports: ["127.0.0.1:8081:80"]
+    volumes: [tei-data:/data]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fs http://localhost:80/health >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 60s
+
+  kafka:
+    profiles: [mq]
+    image: apache/kafka:${KAFKA_IMAGE_TAG:-4.1.0}
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+    ports: ["127.0.0.1:9092:9092"]
+    volumes: [kafka-data:/var/lib/kafka/data]
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
+
+  # obs profile（Langfuse 自托管）暂不提供：本机内存有限，T20 先接 Langfuse 云端或不接。
+
+volumes:
+  mysql-data:
+  redis-data:
+  es-data:
+  ollama-data:
+  tei-data:
+  kafka-data:

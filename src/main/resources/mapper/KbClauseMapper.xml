@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.knowledge.KbClauseMapper">
+
+    <sql id="columns">
+        c.id, c.document_id, d.doc_code, c.clause_ref, c.clause_no, c.parent_no, c.path, c.title, c.body,
+        c.layer, c.levels, c.clause_type, c.ordinal, c.body_sha256
+    </sql>
+
+    <!-- 多行 VALUES 一条语句写入；调用方按批切分，避免超出 max_allowed_packet -->
+    <insert id="insertBatch">
+        INSERT INTO kb_clause (document_id, clause_ref, clause_no, parent_no, path, title, body, layer, levels,
+                               clause_type, ordinal, body_sha256)
+        VALUES
+        <foreach collection="clauses" item="c" separator=",">
+            (#{documentId}, #{c.clauseRef}, #{c.clauseNo}, #{c.parentNo}, #{c.path}, #{c.title}, #{c.body},
+             #{c.layer}, #{c.levels}, #{c.clauseType}, #{c.ordinal}, #{c.bodySha256})
+        </foreach>
+    </insert>
+
+    <delete id="deleteByDocCode">
+        DELETE c FROM kb_clause c JOIN kb_document d ON c.document_id = d.id WHERE d.doc_code = #{docCode}
+    </delete>
+
+    <select id="findByRef" resultType="com.cryptoassess.knowledge.KbClause">
+        SELECT <include refid="columns"/>
+        FROM kb_clause c JOIN kb_document d ON c.document_id = d.id
+        WHERE c.clause_ref = #{clauseRef}
+    </select>
+
+    <select id="findByRefs" resultType="com.cryptoassess.knowledge.KbClause">
+        SELECT <include refid="columns"/>
+        FROM kb_clause c JOIN kb_document d ON c.document_id = d.id
+        WHERE c.clause_ref IN
+        <foreach collection="clauseRefs" item="ref" open="(" separator="," close=")">#{ref}</foreach>
+    </select>
+
+    <select id="findActive" resultType="com.cryptoassess.knowledge.KbClause">
+        SELECT <include refid="columns"/>
+        FROM kb_clause c JOIN kb_document d ON c.document_id = d.id
+        WHERE d.status = 'ACTIVE'
+        ORDER BY d.id, c.ordinal
+    </select>
+
+    <select id="countActive" resultType="int">
+        SELECT COUNT(*) FROM kb_clause c JOIN kb_document d ON c.document_id = d.id WHERE d.status = 'ACTIVE'
+    </select>
+
+    <sql id="pageFilter">
+        FROM kb_clause c JOIN kb_document d ON c.document_id = d.id
+        WHERE d.status = 'ACTIVE'
+        <if test="layer != null">AND c.layer = #{layer}</if>
+        <if test="level != null">AND FIND_IN_SET(#{level}, c.levels) > 0</if>
+    </sql>
+
+    <!-- 检索调试页的默认浏览：按文档和原文顺序分页 -->
+    <select id="findPage" resultType="com.cryptoassess.knowledge.KbClause">
+        SELECT <include refid="columns"/>
+        <include refid="pageFilter"/>
+        ORDER BY d.id, c.ordinal
+        LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="countPage" resultType="int">
+        SELECT COUNT(*) <include refid="pageFilter"/>
+    </select>
+
+    <select id="findRequirements" resultType="com.cryptoassess.knowledge.KbClause">
+        SELECT <include refid="columns"/>
+        FROM kb_clause c JOIN kb_document d ON c.document_id = d.id
+        WHERE d.status = 'ACTIVE' AND c.clause_type = '要求' AND c.layer = #{layer}
+          AND FIND_IN_SET(#{level}, c.levels) > 0
+        ORDER BY d.id, c.ordinal
+    </select>
+
+</mapper>

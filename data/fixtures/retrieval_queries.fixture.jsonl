@@ -1,0 +1,15 @@
+{"id":"f001","query":"机房门禁刷卡要不要用密码技术","gold_refs":["FIX/T 0001-2026#5.1.1"],"style":"colloquial","layer":"物理和环境","level":3,"note":"fixture"}
+{"id":"f002","query":"数据库里存的身份证号需要加密吗","gold_refs":["FIX/T 0001-2026#5.4.3"],"style":"colloquial","layer":"应用和数据","level":3,"note":"fixture"}
+{"id":"f003","query":"运维人员远程登录服务器用明文协议可以吗","gold_refs":["FIX/T 0001-2026#5.3.2"],"style":"colloquial","layer":"设备和计算","level":3,"note":"fixture"}
+{"id":"f004","query":"密钥丢了怎么办","gold_refs":["FIX/T 0001-2026#6.4.1"],"style":"colloquial","layer":"应急处置","level":3,"note":"fixture"}
+{"id":"f005","query":"合同签字怎么保证事后不能抵赖","gold_refs":["FIX/T 0001-2026#5.4.5"],"style":"colloquial","layer":"应用和数据","level":3,"note":"fixture"}
+{"id":"f006","query":"网络中传送重要数据时的保密要求","gold_refs":["FIX/T 0001-2026#5.2.3"],"style":"paraphrase","layer":"网络和通信","level":3,"note":"fixture"}
+{"id":"f007","query":"进出机房记录被篡改的防护","gold_refs":["FIX/T 0001-2026#5.1.2"],"style":"paraphrase","layer":"物理和环境","level":3,"note":"fixture"}
+{"id":"f008","query":"系统日志防篡改和告警","gold_refs":["FIX/T 0001-2026#5.3.3"],"style":"paraphrase","layer":"设备和计算","level":3,"note":"fixture"}
+{"id":"f009","query":"外部设备接入内网前的证书认证","gold_refs":["FIX/T 0001-2026#5.2.5"],"style":"paraphrase","layer":"网络和通信","level":3,"note":"fixture"}
+{"id":"f010","query":"规划阶段编写密码使用方案","gold_refs":["FIX/T 0001-2026#6.3.2"],"style":"paraphrase","layer":"建设运行","level":3,"note":"fixture"}
+{"id":"f011","query":"密钥 生命周期","gold_refs":["FIX/T 0001-2026#6.3.1"],"style":"keyword","layer":"建设运行","level":null,"note":"fixture"}
+{"id":"f012","query":"消息鉴别码","gold_refs":["FIX/T 0001-2026#A.1","FIX/T 0001-2026#5.4.4","FIX/T 0001-2026#5.2.2","FIX/T 0001-2026#5.1.2"],"style":"keyword","layer":null,"level":null,"note":"fixture"}
+{"id":"f013","query":"视频监控 完整性","gold_refs":["FIX/T 0001-2026#5.1.3"],"style":"keyword","layer":"物理和环境","level":null,"note":"fixture"}
+{"id":"f014","query":"密码管理员 培训","gold_refs":["FIX/T 0001-2026#6.2.1"],"style":"keyword","layer":"人员管理","level":null,"note":"fixture"}
+{"id":"f015","query":"边界 访问控制策略","gold_refs":["FIX/T 0001-2026#5.2.4"],"style":"keyword","layer":"网络和通信","level":null,"note":"fixture"}

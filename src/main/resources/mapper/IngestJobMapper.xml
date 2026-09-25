@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.knowledge.ingest.IngestJobMapper">
+
+    <sql id="columns">
+        id, file_name, normalized_sha256, parser_version, document_id, status, attempts, last_error, created_at, updated_at
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="key.id" keyColumn="id">
+        INSERT INTO ingest_job (file_name, normalized_sha256, parser_version, status, attempts, created_at, updated_at)
+        VALUES (#{fileName}, #{sha}, #{parserVersion}, 'PENDING', 0, CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3))
+    </insert>
+
+    <select id="findById" resultType="com.cryptoassess.knowledge.ingest.IngestJob">
+        SELECT <include refid="columns"/> FROM ingest_job WHERE id = #{id}
+    </select>
+
+    <select id="findByContent" resultType="com.cryptoassess.knowledge.ingest.IngestJob">
+        SELECT <include refid="columns"/> FROM ingest_job
+        WHERE normalized_sha256 = #{sha} AND parser_version = #{parserVersion}
+    </select>
+
+    <update id="requeue">
+        UPDATE ingest_job SET status = 'PENDING', file_name = #{fileName}, attempts = 0, last_error = NULL,
+                              updated_at = CURRENT_TIMESTAMP(3)
+        WHERE id = #{id} AND status = 'FAILED'
+    </update>
+
+    <update id="claim">
+        UPDATE ingest_job SET status = 'RUNNING', attempts = attempts + 1, updated_at = CURRENT_TIMESTAMP(3)
+        WHERE id = #{id} AND status IN ('PENDING', 'RUNNING')
+    </update>
+
+    <update id="succeed">
+        UPDATE ingest_job SET status = 'SUCCEEDED', document_id = #{documentId}, last_error = NULL,
+                              updated_at = CURRENT_TIMESTAMP(3)
+        WHERE id = #{id}
+    </update>
+
+    <update id="fail">
+        UPDATE ingest_job
+        SET status = CASE WHEN #{terminal} THEN 'FAILED' ELSE 'PENDING' END, last_error = #{error},
+            updated_at = CURRENT_TIMESTAMP(3)
+        WHERE id = #{id} AND status &lt;&gt; 'SUCCEEDED'
+    </update>
+
+</mapper>

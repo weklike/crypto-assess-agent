@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.knowledge.KbDocumentMapper">
+
+    <sql id="columns">
+        id, doc_code, title, source_sha256, normalized_sha256, parser_version, status, clause_count, imported_at
+    </sql>
+
+    <select id="findByCodeAndSha" resultType="com.cryptoassess.knowledge.KbDocument">
+        SELECT <include refid="columns"/> FROM kb_document
+        WHERE doc_code = #{docCode} AND normalized_sha256 = #{normalizedSha256}
+    </select>
+
+    <select id="findAll" resultType="com.cryptoassess.knowledge.KbDocument">
+        SELECT <include refid="columns"/> FROM kb_document ORDER BY imported_at DESC, id DESC
+    </select>
+
+    <insert id="insert">
+        INSERT INTO kb_document (doc_code, title, source_sha256, normalized_sha256, parser_version, status,
+                                 clause_count, imported_at)
+        VALUES (#{docCode}, #{title}, #{sourceSha256}, #{normalizedSha256}, #{parserVersion}, #{status},
+                #{clauseCount}, #{importedAt})
+    </insert>
+
+    <update id="supersedeActive">
+        UPDATE kb_document SET status = 'SUPERSEDED' WHERE doc_code = #{docCode} AND status = 'ACTIVE'
+    </update>
+
+</mapper>

@@ -1,0 +1,29 @@
+# 量化评分规则 v1（已核对）
+#
+# 字段说明：
+#   - judgment_scores：各判定结果的分值（0-1）
+#   - not_applicable：不计入分子分母的判定
+#   - indicator_aggregation：同一指标有多个测评对象时 mean（平均）还是 min（取最低）
+#   - indicators：个别指标的权重（未列出的用 default_indicator_weight）
+#   - layers：各安全层面的权重
+#   - rounding：输出舍入位数与方式；scale：总分满分
+# 计算器目前不含高风险项和测评单元（D/A/K）细则。
+# 修改数值时新建 scoring.v2.yaml，旧报告按其记录的 rule_version 复现。
+version: v1
+reviewed: true
+scale: 100
+rounding: {scale: 2, mode: HALF_UP}
+judgment_scores: {符合: 1, 部分符合: 0.5, 不符合: 0}
+not_applicable: [不适用]
+indicator_aggregation: mean
+default_indicator_weight: 1
+indicators: {}
+layers:
+  物理和环境: {weight: 10}
+  网络和通信: {weight: 20}
+  设备和计算: {weight: 10}
+  应用和数据: {weight: 30}
+  管理制度: {weight: 7.5}
+  人员管理: {weight: 7.5}
+  建设运行: {weight: 7.5}
+  应急处置: {weight: 7.5}

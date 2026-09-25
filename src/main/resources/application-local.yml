@@ -1,0 +1,4 @@
+# 本机开发：从仓库根目录的 .env 读取配置（.env 不提交，模板见 .env.example）
+spring:
+  config:
+    import: optional:file:.env[.properties]

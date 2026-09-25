@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["applicability", "judgment", "d", "a", "k", "k_module_level", "k_other_requirements_met", "evidence",
+               "missing_info", "rationale", "remediation", "clause_refs", "relevant_algorithms"],
+  "properties": {
+    "applicability": { "type": "string", "enum": ["适用", "不适用"] },
+    "judgment": { "type": "string", "enum": ["符合", "部分符合", "不符合", "不适用"] },
+    "d": { "type": ["boolean", "null"] },
+    "a": { "type": ["boolean", "null"] },
+    "k": { "type": ["boolean", "null"] },
+    "k_module_level": { "type": ["integer", "null"], "minimum": 0, "maximum": 4 },
+    "k_other_requirements_met": { "type": ["boolean", "null"] },
+    "evidence": { "type": "string", "maxLength": 2000 },
+    "missing_info": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 300 } },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "remediation": { "type": "string", "maxLength": 2000 },
+    "clause_refs": { "type": "array", "minItems": 1, "maxItems": 10, "items": { "type": "string", "maxLength": 128 } },
+    "relevant_algorithms": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 64 } }
+  }
+}

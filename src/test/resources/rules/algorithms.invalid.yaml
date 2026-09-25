@@ -1,0 +1,7 @@
+version: broken
+algorithms:
+  - name: X
+    category: hash
+    aliases: [X]
+    status: PERHAPS
+    basis: 故意写错的状态，用于启动失败测试

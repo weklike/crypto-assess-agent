@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.assessment.AssessProjectMapper">
+
+    <sql id="columns">id, name, system_name, level, status, last_error, version, created_at, updated_at</sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="key.id" keyColumn="id">
+        INSERT INTO assess_project (name, system_name, level, status, version, created_at, updated_at)
+        VALUES (#{p.name}, #{p.systemName}, #{p.level}, #{p.status}, 0, #{p.createdAt}, #{p.updatedAt})
+    </insert>
+
+    <select id="findById" resultType="com.cryptoassess.assessment.AssessProject">
+        SELECT <include refid="columns"/> FROM assess_project WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.cryptoassess.assessment.AssessProject">
+        SELECT <include refid="columns"/> FROM assess_project ORDER BY id DESC
+    </select>
+
+    <update id="transition">
+        UPDATE assess_project
+        SET status = #{to}, version = version + 1, updated_at = CURRENT_TIMESTAMP(3), last_error = #{lastError}
+        WHERE id = #{id} AND status = #{from} AND version = #{version}
+    </update>
+
+</mapper>

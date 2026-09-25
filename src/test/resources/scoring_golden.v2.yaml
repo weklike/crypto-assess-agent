@@ -1,0 +1,900 @@
+# 评分 golden 用例 v2（按生产规则 rules/scoring.v2.yaml，第三级）。
+# 来源：调研算术候选 docs/crypto_research/drafts/scoring_arithmetic.review-candidates.yaml（S08《量化评估规则（2023 版）》），
+#   期望值逐条照抄候选的 candidate_expected，不是由本项目的计算器算出；每条的 source 写明候选编号与推导。
+# 转换方式：候选给出的对象分、单元分、层面分，用对应的 D/A/K 或管理判定构造差距项，挂在 GB/T 43206-2023 测评指标（单元号 .1）上，
+#   层面加权用例选取第三级表 4 权重与候选一致的测评单元。
+# 未收录：AR15、AR16、AR17（“弥补”由测评人员判断，不在自动评分流水线中，已在 OfficialScoringTest 中单独测试）。
+# 状态：已由仓库所有者确认（2026-09-25）；如需修改，新建 v3 并在 eval/datasets/CHANGELOG.md 说明。
+format: scoring-golden-v2
+owner_confirmed: true
+cases:
+- id: AR01 D1A1K1，Ra=1，Rk=1
+  source: AR01（S08）：D=A=K=1 → 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '1.0000'
+- id: AR02 D0A1K1，Ra=1，Rk=1
+  source: AR02（S08）：D=0 → 0
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+    a: true
+    k: true
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '0.0000'
+- id: AR03 D0A0K0，Ra=1，Rk=1
+  source: AR03（S08）：D=0 → 0
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+    a: false
+    k: false
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '0.0000'
+- id: AR04 D1A0K1，Ra=.2，Rk=1
+  source: AR04（S08）：0.5 × .2
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '.2'
+    rk: '1'
+  objects:
+    o1: '0.1000'
+- id: AR05 D1A0K1，Ra=.5，Rk=1
+  source: AR05（S08）：0.5 × .5
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '.5'
+    rk: '1'
+  objects:
+    o1: '0.2500'
+- id: AR06 D1A0K1，Ra=1，Rk=1
+  source: AR06（S08）：0.5 × 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '0.5000'
+- id: AR07 D1A1K0，Ra=1，Rk=1
+  source: AR07（S08）：0.5 × 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: false
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '0.5000'
+- id: AR08 D1A1K0，Ra=1，Rk=1.2
+  source: AR08（S08）：0.5 × 1.2
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: false
+    ra: '1'
+    rk: '1.2'
+  objects:
+    o1: '0.6000'
+- id: AR09 D1A1K0，Ra=1，Rk=1.5
+  source: AR09（S08）：0.5 × 1.5
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: false
+    ra: '1'
+    rk: '1.5'
+  objects:
+    o1: '0.7500'
+- id: AR10 D1A0K0，Ra=.2，Rk=1
+  source: AR10（S08）：0.25 × .2 × 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: false
+    ra: '.2'
+    rk: '1'
+  objects:
+    o1: '0.0500'
+- id: AR11 D1A0K0，Ra=.5，Rk=1
+  source: AR11（S08）：0.25 × .5 × 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: false
+    ra: '.5'
+    rk: '1'
+  objects:
+    o1: '0.1250'
+- id: AR12 D1A0K0，Ra=1，Rk=1
+  source: AR12（S08）：0.25 × 1 × 1
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: false
+    ra: '1'
+    rk: '1'
+  objects:
+    o1: '0.2500'
+- id: AR13 D1A0K0，Ra=1，Rk=1.2
+  source: AR13（S08）：0.25 × 1 × 1.2
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: false
+    ra: '1'
+    rk: '1.2'
+  objects:
+    o1: '0.3000'
+- id: AR14 D1A0K0，Ra=1，Rk=1.5
+  source: AR14（S08）：0.25 × 1 × 1.5
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: false
+    ra: '1'
+    rk: '1.5'
+  objects:
+    o1: '0.3750'
+- id: AR18 测评单元对象平均：1,0
+  source: AR18（S08）：sum(scores)/n，结果四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o2
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  units:
+    应用和数据|重要数据存储机密性: '0.5000'
+- id: AR19 测评单元对象平均：1,0,0
+  source: AR19（S08）：sum(scores)/n，结果四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o2
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: o3
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  units:
+    应用和数据|重要数据存储机密性: '0.3333'
+- id: AR20 测评单元对象平均：1,1,0
+  source: AR20（S08）：sum(scores)/n，结果四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o2
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o3
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  units:
+    应用和数据|重要数据存储机密性: '0.6667'
+- id: AR21 测评单元对象平均：1,.5,0
+  source: AR21（S08）：sum(scores)/n，结果四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o2
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: o3
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  units:
+    应用和数据|重要数据存储机密性: '0.5000'
+- id: AR22 层面加权：1,0
+  source: AR22（S08）：sum(score×weight)/sum(weight)，四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.7.1
+    d: false
+  layers:
+    应用和数据: '0.5882'
+- id: AR23 层面加权：1,0
+  source: AR23（S08）：sum(score×weight)/sum(weight)，四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.4.1
+    d: false
+  layers:
+    应用和数据: '0.5000'
+- id: AR24 层面加权：1,.5,0
+  source: AR24（S08）：sum(score×weight)/sum(weight)，四舍五入4位
+  level: 3
+  findings:
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.7.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: o1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.2.1
+    d: false
+  layers:
+    应用和数据: '0.6429'
+- id: AR25 管理测评单元：符合
+  source: AR25（S08）：管理测评单元的固定判定分值
+  level: 3
+  findings:
+  - object: org
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 符合
+  units:
+    管理制度|具备密码应用安全管理制度: '1.0000'
+- id: AR26 管理测评单元：部分符合
+  source: AR26（S08）：管理测评单元的固定判定分值
+  level: 3
+  findings:
+  - object: org
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 部分符合
+  units:
+    管理制度|具备密码应用安全管理制度: '0.5000'
+- id: AR27 管理测评单元：不符合
+  source: AR27（S08）：管理测评单元的固定判定分值
+  level: 3
+  findings:
+  - object: org
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不符合
+  units:
+    管理制度|具备密码应用安全管理制度: '0.0000'
+- id: AR28 八层面均满分
+  source: AR28（S08）：70 + 30 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: true
+    a: true
+    k: true
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: true
+    a: true
+    k: true
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: true
+    a: true
+    k: true
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 符合
+  layers:
+    物理和环境: '1.0000'
+    网络和通信: '1.0000'
+    设备和计算: '1.0000'
+    应用和数据: '1.0000'
+    管理制度: '1.0000'
+    人员管理: '1.0000'
+    建设运行: '1.0000'
+    应急处置: '1.0000'
+  total: '100.00'
+- id: AR29 八层面均零分
+  source: AR29（S08）：0 + 0 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: false
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: false
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: false
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 不符合
+  layers:
+    物理和环境: '0.0000'
+    网络和通信: '0.0000'
+    设备和计算: '0.0000'
+    应用和数据: '0.0000'
+    管理制度: '0.0000'
+    人员管理: '0.0000'
+    建设运行: '0.0000'
+    应急处置: '0.0000'
+  total: '0.00'
+- id: AR30 八层面均半分
+  source: AR30（S08）：35.0 + 15.0 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 部分符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 部分符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 部分符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 部分符合
+  layers:
+    物理和环境: '0.5000'
+    网络和通信: '0.5000'
+    设备和计算: '0.5000'
+    应用和数据: '0.5000'
+    管理制度: '0.5000'
+    人员管理: '0.5000'
+    建设运行: '0.5000'
+    应急处置: '0.5000'
+  total: '50.00'
+- id: AR31 仅应急层面满分，其余为零
+  source: AR31（S08）：0 + 6.0 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: false
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: false
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: false
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 符合
+  layers:
+    物理和环境: '0.0000'
+    网络和通信: '0.0000'
+    设备和计算: '0.0000'
+    应用和数据: '0.0000'
+    管理制度: '0.0000'
+    人员管理: '0.0000'
+    建设运行: '0.0000'
+    应急处置: '1.0000'
+  total: '6.00'
+- id: AR32 仅管理制度满分，其余为零
+  source: AR32（S08）：0 + 8.000000000000000000000000001 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: false
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: false
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: false
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 不符合
+  layers:
+    物理和环境: '0.0000'
+    网络和通信: '0.0000'
+    设备和计算: '0.0000'
+    应用和数据: '0.0000'
+    管理制度: '1.0000'
+    人员管理: '0.0000'
+    建设运行: '0.0000'
+    应急处置: '0.0000'
+  total: '8.00'
+- id: AR33 物理层面不适用，其余均半分
+  source: AR33（S08）：35.0 + 15.0 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    judgment: 不适用
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 部分符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 部分符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 部分符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 部分符合
+  layers:
+    物理和环境: null
+    网络和通信: '0.5000'
+    设备和计算: '0.5000'
+    应用和数据: '0.5000'
+    管理制度: '0.5000'
+    人员管理: '0.5000'
+    建设运行: '0.5000'
+    应急处置: '0.5000'
+  total: '50.00'
+- id: AR34 三个管理层面不适用，技术半分，应急满分
+  source: AR34（S08）：35.0 + 30 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: false
+    k: true
+    ra: '1'
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不适用
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不适用
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不适用
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 符合
+  layers:
+    物理和环境: '0.5000'
+    网络和通信: '0.5000'
+    设备和计算: '0.5000'
+    应用和数据: '0.5000'
+    管理制度: null
+    人员管理: null
+    建设运行: null
+    应急处置: '1.0000'
+  total: '65.00'
+- id: AR35 验证总分两位舍入
+  source: AR35（S08）：23.3310 + 20.0010 → 四舍五入2位
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: true
+    a: true
+    k: true
+  - object: 物理和环境-2
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: false
+  - object: 物理和环境-3
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    d: false
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: true
+    a: true
+    k: true
+  - object: 网络和通信-2
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: false
+  - object: 网络和通信-3
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    d: false
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: true
+    a: true
+    k: true
+  - object: 设备和计算-2
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: false
+  - object: 设备和计算-3
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    d: false
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: true
+    a: true
+    k: true
+  - object: 应用和数据-2
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: 应用和数据-3
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    d: false
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 符合
+  - object: 管理制度-2
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 符合
+  - object: 管理制度-3
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不符合
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 符合
+  - object: 人员管理-2
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 符合
+  - object: 人员管理-3
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不符合
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 符合
+  - object: 建设运行-2
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 符合
+  - object: 建设运行-3
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不符合
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 符合
+  - object: 应急处置-2
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 符合
+  - object: 应急处置-3
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 不符合
+  layers:
+    物理和环境: '0.3333'
+    网络和通信: '0.3333'
+    设备和计算: '0.3333'
+    应用和数据: '0.3333'
+    管理制度: '0.6667'
+    人员管理: '0.6667'
+    建设运行: '0.6667'
+    应急处置: '0.6667'
+  total: '43.33'
+- id: AR36 技术或管理组全部不适用导致分母为零
+  source: AR36（S08）：0分母；不猜测数值
+  level: 3
+  findings:
+  - object: 物理和环境-1
+    layer: 物理和环境
+    clause_ref: GB/T 43206-2023#6.1.1.1
+    judgment: 不适用
+  - object: 网络和通信-1
+    layer: 网络和通信
+    clause_ref: GB/T 43206-2023#6.2.1.1
+    judgment: 不适用
+  - object: 设备和计算-1
+    layer: 设备和计算
+    clause_ref: GB/T 43206-2023#6.3.1.1
+    judgment: 不适用
+  - object: 应用和数据-1
+    layer: 应用和数据
+    clause_ref: GB/T 43206-2023#6.4.5.1
+    judgment: 不适用
+  - object: 管理制度-1
+    layer: 管理制度
+    clause_ref: GB/T 43206-2023#7.1.1.1
+    judgment: 不适用
+  - object: 人员管理-1
+    layer: 人员管理
+    clause_ref: GB/T 43206-2023#7.2.2.1
+    judgment: 不适用
+  - object: 建设运行-1
+    layer: 建设运行
+    clause_ref: GB/T 43206-2023#7.3.1.1
+    judgment: 不适用
+  - object: 应急处置-1
+    layer: 应急处置
+    clause_ref: GB/T 43206-2023#7.4.1.1
+    judgment: 不适用
+  layers:
+    物理和环境: null
+    网络和通信: null
+    设备和计算: null
+    应用和数据: null
+    管理制度: null
+    人员管理: null
+    建设运行: null
+    应急处置: null
+  total: null
+  total_note: 分母为 0

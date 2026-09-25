@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.qa.QaRecordMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="key.id" keyColumn="id">
+        INSERT INTO qa_record (question, mode, answer, citations_json, invalid_citation_count, refused, top_score,
+                               prompt_version, llm_call_id, first_token_ms, latency_ms, created_at)
+        VALUES (#{record.question}, #{record.mode}, #{record.answer}, #{record.citationsJson},
+                #{record.invalidCitationCount}, #{record.refused}, #{record.topScore}, #{record.promptVersion},
+                #{record.llmCallId}, #{record.firstTokenMs}, #{record.latencyMs}, #{record.createdAt})
+    </insert>
+
+</mapper>

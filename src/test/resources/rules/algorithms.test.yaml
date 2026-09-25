@@ -1,0 +1,85 @@
+# 测试专用规则表：结构与正式规则表相同，内容只为覆盖写法与分支，不代表合规结论
+version: test-1
+reviewed: true
+algorithms:
+  - name: SM2
+    category: public_key
+    aliases: [SM2, 国密SM2]
+    status: APPROVED
+    basis: 测试依据 A
+    clause_refs: ["FIX/T 0001-2026#4.1"]
+  - name: SM3
+    category: hash
+    aliases: [SM3]
+    status: APPROVED
+    basis: 测试依据 A
+  - name: SM4
+    category: block_cipher
+    aliases: [SM4, SMS4]
+    status: APPROVED
+    basis: 测试依据 A
+  - name: ZUC
+    category: stream_cipher
+    aliases: [ZUC, 祖冲之]
+    status: APPROVED
+    basis: 测试依据 A
+  - name: HMAC-SM3
+    category: mac
+    aliases: [HMAC-SM3, HMACSM3]
+    status: APPROVED
+    basis: 测试依据 A
+  - name: AES
+    category: block_cipher
+    aliases: [AES, RIJNDAEL]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+    security_bits: 128
+    security_bits_by_key: {128: 128, 192: 192, 256: 256}
+  - name: 3DES
+    category: block_cipher
+    aliases: [3DES, TDEA, DESEDE, TRIPLEDES]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+  - name: DES
+    category: block_cipher
+    aliases: [DES]
+    status: INSECURE
+    basis: 测试依据 C
+  - name: RSA
+    category: public_key
+    aliases: [RSA]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+    security_bits: 80
+    security_bits_by_key: {1024: 80, 2048: 112, 3072: 128}
+  - name: SHA-256
+    category: hash
+    aliases: [SHA-256, SHA256, SHA2]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+  - name: SHA-1
+    category: hash
+    aliases: [SHA-1, SHA1]
+    status: INSECURE
+    basis: 测试依据 C
+  - name: MD5
+    category: hash
+    aliases: [MD5]
+    status: INSECURE
+    basis: 测试依据 C
+    security_bits: 0
+  - name: HMAC-SHA256
+    category: mac
+    aliases: [HMAC-SHA256, HMACSHA256]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+  - name: ECDSA
+    category: public_key
+    aliases: [ECDSA]
+    status: NOT_APPROVED
+    basis: 测试依据 B
+  - name: RC4
+    category: stream_cipher
+    aliases: [RC4, ARCFOUR]
+    status: INSECURE
+    basis: 测试依据 C

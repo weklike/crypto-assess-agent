@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cryptoassess.assessment.AssessFindingMapper">
+
+    <sql id="columns">
+        id, project_id, object_id, clause_ref, judgment, evidence, rule_hits_json, rationale, remediation,
+        missing_info_json, source, llm_call_id, reviewed, reviewer_note, reviewed_at, created_at, updated_at,
+        dim_d, dim_a, dim_k, ra, rk, module_level
+    </sql>
+
+    <select id="findByProject" resultType="com.cryptoassess.assessment.AssessFinding">
+        SELECT <include refid="columns"/> FROM assess_finding WHERE project_id = #{projectId} ORDER BY object_id, id
+    </select>
+
+    <select id="findById" resultType="com.cryptoassess.assessment.AssessFinding">
+        SELECT <include refid="columns"/> FROM assess_finding WHERE id = #{id}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO assess_finding (project_id, object_id, clause_ref, judgment, evidence, rule_hits_json, rationale,
+                                    remediation, missing_info_json, source, llm_call_id, reviewed, created_at,
+                                    updated_at, dim_d, dim_a, dim_k, ra, rk, module_level)
+        VALUES (#{f.projectId}, #{f.objectId}, #{f.clauseRef}, #{f.judgment}, #{f.evidence}, #{f.ruleHitsJson},
+                #{f.rationale}, #{f.remediation}, #{f.missingInfoJson}, #{f.source}, #{f.llmCallId}, FALSE,
+                CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3), #{f.dimD}, #{f.dimA}, #{f.dimK}, #{f.ra}, #{f.rk},
+                #{f.moduleLevel})
+        ON DUPLICATE KEY UPDATE
+            judgment = VALUES(judgment), evidence = VALUES(evidence), rule_hits_json = VALUES(rule_hits_json),
+            rationale = VALUES(rationale), remediation = VALUES(remediation),
+            missing_info_json = VALUES(missing_info_json), source = VALUES(source), llm_call_id = VALUES(llm_call_id),
+            dim_d = VALUES(dim_d), dim_a = VALUES(dim_a), dim_k = VALUES(dim_k), ra = VALUES(ra), rk = VALUES(rk),
+            module_level = VALUES(module_level),
+            reviewed = FALSE, reviewer_note = NULL, reviewed_at = NULL, updated_at = CURRENT_TIMESTAMP(3)
+    </insert>
+
+    <update id="review">
+        UPDATE assess_finding
+        SET judgment = #{judgment}, reviewer_note = #{note}, reviewed = #{reviewed}, source = #{source},
+            dim_d = #{d}, dim_a = #{a}, dim_k = #{k}, ra = #{ra}, rk = #{rk},
+            reviewed_at = CASE WHEN #{reviewed} THEN CURRENT_TIMESTAMP(3) ELSE NULL END,
+            updated_at = CURRENT_TIMESTAMP(3)
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteByObject">
+        DELETE FROM assess_finding WHERE object_id = #{objectId}
+    </delete>
+
+    <select id="countUnreviewed" resultType="int">
+        SELECT COUNT(*) FROM assess_finding WHERE project_id = #{projectId} AND reviewed = FALSE
+    </select>
+
+</mapper>

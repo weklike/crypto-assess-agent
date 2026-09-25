@@ -1,0 +1,10 @@
+# 统一以 LF 入库；Windows 脚本检出为 CRLF
+* text=auto eol=lf
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+*.jar binary
+*.xlsx binary
+*.docx binary
+*.png binary
+*.jpg binary

@@ -1,0 +1,51 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### 本项目 ###
+# 标准原文、考核题库及其派生数据只在本地使用，禁止提交
+data/raw/
+data/private/
+data/normalized/
+# 本地配置与密钥
+.env
+.env.*
+!.env.example
+
+### 系统与临时文件 ###
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+*.log
+*.swp
+*.bak

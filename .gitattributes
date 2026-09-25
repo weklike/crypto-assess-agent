@@ -3,6 +3,9 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
 
+# CSV 为 Excel 导出（CRLF + BOM），且 crypto_research 的 sha256 清单按字节校验，原样入库
+*.csv -text
+
 *.jar binary
 *.xlsx binary
 *.docx binary

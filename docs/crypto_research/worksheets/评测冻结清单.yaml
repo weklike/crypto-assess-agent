@@ -1,0 +1,61 @@
+format: research-freeze-worksheet-v1
+approved: false
+owner: null
+date: null
+git_commit: null
+standards:
+  GB/T 39786-2021:
+    raw_sha256: null
+    normalized_sha256: null
+    owner_reviewed: false
+  GB/T 43206-2023:
+    raw_sha256: null
+    normalized_sha256: null
+    owner_reviewed: false
+data_boundary:
+  raw_text_leaves_local_machine: null
+  permitted_processing_basis: null
+  tracing_content_policy_reviewed: false
+datasets:
+  retrieval_sha256: null
+  qa_sample_sha256: null
+  qa_version: 2026更新版，原件待核
+  qa_seed: 20260924
+  systems_sha256: null
+  scoring_golden_sha256: null
+  synthetic_ratio: null
+  split_group_policy: null
+engine:
+  embedding_model_digest: null
+  reranker_model_digest: null
+  index_version: null
+  ik_dictionary_sha256: null
+  top_n: null
+  refuse_threshold: null
+  hardware: null
+  cold_warm_cache_protocol: null
+llm:
+  provider: null
+  request_model: null
+  response_model_mapping: null
+  reasoning_effort: null
+  temperature: null
+  max_output_tokens: null
+  timeout_layers: null
+  retry_policy: null
+rules:
+  algorithm_version: null
+  scoring_version: null
+  owner_reviewed: false
+  high_risk_scope: null
+  undefined_boundaries: null
+cost:
+  price_source: null
+  price_effective_date: null
+  currency: null
+  fixed_fx: null
+  fx_source_date: null
+  missing_price_policy: null，单独报告缺失；不是0
+prompts_sha256: null
+results_directory: null
+formal_run_started: false

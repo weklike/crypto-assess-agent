@@ -1,0 +1,43 @@
+[
+  {
+    "id": "S01",
+    "name": "GB/T 39786-2021 信息安全技术 信息系统密码应用基本要求",
+    "type": "国家标准元信息",
+    "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=53282C88712CE157043B7A2C590278FC",
+    "access_date": "2026-09-25",
+    "use": "核对标准号、名称、年份；不是每题问句的出处"
+  },
+  {
+    "id": "S02",
+    "name": "GB/T 43206-2023 信息安全技术 信息系统密码应用测评要求",
+    "type": "国家标准元信息",
+    "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=EE1B34C97A17C6F13FA9A9D891C144C2",
+    "access_date": "2026-09-25",
+    "use": "核对标准号、名称、年份"
+  },
+  {
+    "id": "S03",
+    "name": "GB/T 39786-2021 江苏省密码管理局公开PDF",
+    "type": "标准原文；页面图像核对",
+    "url": "https://www.jsmm.gov.cn/u/cms/www/202110/140914053ph6.pdf",
+    "access_date": "2026-09-25",
+    "use": "核对第5—9章及附录B的编号、字母列项；只交付定位索引，不附正文"
+  },
+  {
+    "id": "S04",
+    "name": "GB/T 43206-2023 四川省密码管理局发布页",
+    "type": "标准官方发布页",
+    "url": "https://www.scmgj.gov.cn/scsmmglj/c103230/2024/5/7/87fc36b165584c9b9d833ef77d54e016.shtml",
+    "access_date": "2026-09-25",
+    "use": "标准获取入口；本次该页标准PDF未成功读取，不能声称已逐页核对该PDF"
+  },
+  {
+    "id": "S05",
+    "name": "商用密码应用安全性评估测评实施指引（2024年11月）",
+    "type": "中国密码学会密评联委会原始指导文件；四川省密码管理局发布",
+    "url": "https://www.scmgj.gov.cn/scsmmglj/c103231/2024/11/29/3aa472e703304a5bb96022e78fea7810.shtml",
+    "pdf_url": "https://www.scmgj.gov.cn/scsmmglj/c103231/2024/11/29/3aa472e703304a5bb96022e78fea7810/files/%E9%99%84%E4%BB%B61%EF%BC%9A%E3%80%8A%E5%95%86%E7%94%A8%E5%AF%86%E7%A0%81%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E6%80%A7%E8%AF%84%E4%BC%B0%E6%B5%8B%E8%AF%84%E5%AE%9E%E6%96%BD%E6%8C%87%E5%BC%95%E3%80%8B.pdf",
+    "access_date": "2026-09-25",
+    "use": "第7—9章明确引用GB/T 43206-2023的测评指标编号；区分指引自身编号与国家标准编号。PDF文本可读，截图服务未能渲染，未把截图失败当作视觉验证。"
+  }
+]

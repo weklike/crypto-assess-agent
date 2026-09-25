@@ -1,0 +1,57 @@
+{
+  "input_sha256": "51ed62d75a765320696baf6e63712618e0f219cafbf9917f3cd77526c7dd4021",
+  "row_count": 150,
+  "unique_id_count": 150,
+  "original_questions_and_ids_preserved": true,
+  "all_rows_have_standard_numbers": true,
+  "all_rows_have_nonempty_candidate_refs": true,
+  "all_candidate_refs_exist_in_delivery_catalog": true,
+  "all_rows_have_indicator_clause_numbers": true,
+  "no_fabricated_fixture_references": true,
+  "style_counts": {
+    "colloquial": 50,
+    "paraphrase": 50,
+    "keyword": 50
+  },
+  "layer_counts": {
+    "物理和环境": 18,
+    "网络和通信": 24,
+    "设备和计算": 21,
+    "应用和数据": 27,
+    "管理制度": 15,
+    "人员管理": 15,
+    "建设运行": 15,
+    "应急处置": 15
+  },
+  "mapping_classification_counts": {
+    "直接对应": 72,
+    "多条联合": 30,
+    "部分支持": 24,
+    "需场景确认": 24
+  },
+  "core_measurement_units_in_catalog": 41,
+  "catalog_locations_including_general_and_supplement": 48,
+  "core_units_selected_as_primary": 38,
+  "not_selected_as_primary": [
+    "GB/T 43206-2023#6.4.2 访问控制信息完整性",
+    "GB/T 43206-2023#6.4.3 重要信息资源安全标记完整性",
+    "GB/T 43206-2023#7.2.1 密码相关法律法规和密码管理制度"
+  ],
+  "project_kb_validation_run": false,
+  "owner_approved": false,
+  "date": "2026-09-25",
+  "xlsx_xml_parse": "passed",
+  "xlsx_sheet_names": [
+    "使用说明",
+    "150题逐题依据",
+    "150题分级要求",
+    "测评单元目录",
+    "来源登记"
+  ],
+  "xlsx_cell_errors": [],
+  "csv_jsonl_consistent": true,
+  "seven_field_schema_preserved": true,
+  "visual_preview_checked": true,
+  "input_file_unchanged": true,
+  "xlsx_sha256": "0b52fb50ecccbdca7b42069fe309e85e3635143a8094cddc60c0c941cb9aa846"
+}

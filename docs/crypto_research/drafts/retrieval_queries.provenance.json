@@ -1,0 +1,2409 @@
+{
+  "schema_version": "research-candidate-1",
+  "formal_dataset": false,
+  "query_count": 150,
+  "distinct_intent_groups": 50,
+  "synthetic_ratio": 1.0,
+  "records": [
+    {
+      "id": "CQ001",
+      "intent_group": "IG001",
+      "intent": "机房身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ002",
+      "intent_group": "IG001",
+      "intent": "机房身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ003",
+      "intent_group": "IG001",
+      "intent": "机房身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ004",
+      "intent_group": "IG002",
+      "intent": "门禁记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ005",
+      "intent_group": "IG002",
+      "intent": "门禁记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ006",
+      "intent_group": "IG002",
+      "intent": "门禁记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ007",
+      "intent_group": "IG003",
+      "intent": "视频记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ008",
+      "intent_group": "IG003",
+      "intent": "视频记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ009",
+      "intent_group": "IG003",
+      "intent": "视频记录完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ010",
+      "intent_group": "IG004",
+      "intent": "门禁卡密钥",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ011",
+      "intent_group": "IG004",
+      "intent": "门禁卡密钥",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ012",
+      "intent_group": "IG004",
+      "intent": "门禁卡密钥",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ013",
+      "intent_group": "IG005",
+      "intent": "共用机房证据",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ014",
+      "intent_group": "IG005",
+      "intent": "共用机房证据",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ015",
+      "intent_group": "IG005",
+      "intent": "共用机房证据",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ016",
+      "intent_group": "IG006",
+      "intent": "门禁身份与权限",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ017",
+      "intent_group": "IG006",
+      "intent": "门禁身份与权限",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ018",
+      "intent_group": "IG006",
+      "intent": "门禁身份与权限",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ019",
+      "intent_group": "IG007",
+      "intent": "VPN身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ020",
+      "intent_group": "IG007",
+      "intent": "VPN身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ021",
+      "intent_group": "IG007",
+      "intent": "VPN身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ022",
+      "intent_group": "IG008",
+      "intent": "协议套件",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ023",
+      "intent_group": "IG008",
+      "intent": "协议套件",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ024",
+      "intent_group": "IG008",
+      "intent": "协议套件",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ025",
+      "intent_group": "IG009",
+      "intent": "链路终止点",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ026",
+      "intent_group": "IG009",
+      "intent": "链路终止点",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ027",
+      "intent_group": "IG009",
+      "intent": "链路终止点",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ028",
+      "intent_group": "IG010",
+      "intent": "报文完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ029",
+      "intent_group": "IG010",
+      "intent": "报文完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ030",
+      "intent_group": "IG010",
+      "intent": "报文完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ031",
+      "intent_group": "IG011",
+      "intent": "安全接入",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ032",
+      "intent_group": "IG011",
+      "intent": "安全接入",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ033",
+      "intent_group": "IG011",
+      "intent": "安全接入",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ034",
+      "intent_group": "IG012",
+      "intent": "边界规则完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ035",
+      "intent_group": "IG012",
+      "intent": "边界规则完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ036",
+      "intent_group": "IG012",
+      "intent": "边界规则完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ037",
+      "intent_group": "IG013",
+      "intent": "证书失效",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ038",
+      "intent_group": "IG013",
+      "intent": "证书失效",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ039",
+      "intent_group": "IG013",
+      "intent": "证书失效",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ040",
+      "intent_group": "IG014",
+      "intent": "专网密码需求",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ041",
+      "intent_group": "IG014",
+      "intent": "专网密码需求",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ042",
+      "intent_group": "IG014",
+      "intent": "专网密码需求",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ043",
+      "intent_group": "IG015",
+      "intent": "远程管理通道",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ044",
+      "intent_group": "IG015",
+      "intent": "远程管理通道",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ045",
+      "intent_group": "IG015",
+      "intent": "远程管理通道",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ046",
+      "intent_group": "IG016",
+      "intent": "管理身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ047",
+      "intent_group": "IG016",
+      "intent": "管理身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ048",
+      "intent_group": "IG016",
+      "intent": "管理身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ049",
+      "intent_group": "IG017",
+      "intent": "日志防篡改",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ050",
+      "intent_group": "IG017",
+      "intent": "日志防篡改",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ051",
+      "intent_group": "IG017",
+      "intent": "日志防篡改",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ052",
+      "intent_group": "IG018",
+      "intent": "程序来源真实性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ053",
+      "intent_group": "IG018",
+      "intent": "程序来源真实性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ054",
+      "intent_group": "IG018",
+      "intent": "程序来源真实性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ055",
+      "intent_group": "IG019",
+      "intent": "资源访问控制",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ056",
+      "intent_group": "IG019",
+      "intent": "资源访问控制",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ057",
+      "intent_group": "IG019",
+      "intent": "资源访问控制",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ058",
+      "intent_group": "IG020",
+      "intent": "安全标记",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ059",
+      "intent_group": "IG020",
+      "intent": "安全标记",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ060",
+      "intent_group": "IG020",
+      "intent": "安全标记",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ061",
+      "intent_group": "IG021",
+      "intent": "设备产品证书",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ062",
+      "intent_group": "IG021",
+      "intent": "设备产品证书",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ063",
+      "intent_group": "IG021",
+      "intent": "设备产品证书",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ064",
+      "intent_group": "IG022",
+      "intent": "数据库存储机密性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ065",
+      "intent_group": "IG022",
+      "intent": "数据库存储机密性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ066",
+      "intent_group": "IG022",
+      "intent": "数据库存储机密性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ067",
+      "intent_group": "IG023",
+      "intent": "应用身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ068",
+      "intent_group": "IG023",
+      "intent": "应用身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ069",
+      "intent_group": "IG023",
+      "intent": "应用身份鉴别",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ070",
+      "intent_group": "IG024",
+      "intent": "业务数据完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ071",
+      "intent_group": "IG024",
+      "intent": "业务数据完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ072",
+      "intent_group": "IG024",
+      "intent": "业务数据完整性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ073",
+      "intent_group": "IG025",
+      "intent": "电子签名",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ074",
+      "intent_group": "IG025",
+      "intent": "电子签名",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ075",
+      "intent_group": "IG025",
+      "intent": "电子签名",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ076",
+      "intent_group": "IG026",
+      "intent": "不可否认性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ077",
+      "intent_group": "IG026",
+      "intent": "不可否认性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ078",
+      "intent_group": "IG026",
+      "intent": "不可否认性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ079",
+      "intent_group": "IG027",
+      "intent": "应用密钥硬编码",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ080",
+      "intent_group": "IG027",
+      "intent": "应用密钥硬编码",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ081",
+      "intent_group": "IG027",
+      "intent": "应用密钥硬编码",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ082",
+      "intent_group": "IG028",
+      "intent": "备份密码保护",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ083",
+      "intent_group": "IG028",
+      "intent": "备份密码保护",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ084",
+      "intent_group": "IG028",
+      "intent": "备份密码保护",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ085",
+      "intent_group": "IG029",
+      "intent": "接口身份认证",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ086",
+      "intent_group": "IG029",
+      "intent": "接口身份认证",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ087",
+      "intent_group": "IG029",
+      "intent": "接口身份认证",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ088",
+      "intent_group": "IG030",
+      "intent": "密钥轮换兼容",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ089",
+      "intent_group": "IG030",
+      "intent": "密钥轮换兼容",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ090",
+      "intent_group": "IG030",
+      "intent": "密钥轮换兼容",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ091",
+      "intent_group": "IG031",
+      "intent": "制度覆盖",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ092",
+      "intent_group": "IG031",
+      "intent": "制度覆盖",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ093",
+      "intent_group": "IG031",
+      "intent": "制度覆盖",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ094",
+      "intent_group": "IG032",
+      "intent": "密钥管理规则",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ095",
+      "intent_group": "IG032",
+      "intent": "密钥管理规则",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ096",
+      "intent_group": "IG032",
+      "intent": "密钥管理规则",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ097",
+      "intent_group": "IG033",
+      "intent": "制度发布",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ098",
+      "intent_group": "IG033",
+      "intent": "制度发布",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ099",
+      "intent_group": "IG033",
+      "intent": "制度发布",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ100",
+      "intent_group": "IG034",
+      "intent": "制度修订",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ101",
+      "intent_group": "IG034",
+      "intent": "制度修订",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ102",
+      "intent_group": "IG034",
+      "intent": "制度修订",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ103",
+      "intent_group": "IG035",
+      "intent": "操作留痕",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ104",
+      "intent_group": "IG035",
+      "intent": "操作留痕",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ105",
+      "intent_group": "IG035",
+      "intent": "操作留痕",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ106",
+      "intent_group": "IG036",
+      "intent": "岗位分工",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ107",
+      "intent_group": "IG036",
+      "intent": "岗位分工",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ108",
+      "intent_group": "IG036",
+      "intent": "岗位分工",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ109",
+      "intent_group": "IG037",
+      "intent": "人员培训",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ110",
+      "intent_group": "IG037",
+      "intent": "人员培训",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ111",
+      "intent_group": "IG037",
+      "intent": "人员培训",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ112",
+      "intent_group": "IG038",
+      "intent": "人员考核",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ113",
+      "intent_group": "IG038",
+      "intent": "人员考核",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ114",
+      "intent_group": "IG038",
+      "intent": "人员考核",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ115",
+      "intent_group": "IG039",
+      "intent": "调离交接",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ116",
+      "intent_group": "IG039",
+      "intent": "调离交接",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ117",
+      "intent_group": "IG039",
+      "intent": "调离交接",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ118",
+      "intent_group": "IG040",
+      "intent": "保密责任",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ119",
+      "intent_group": "IG040",
+      "intent": "保密责任",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ120",
+      "intent_group": "IG040",
+      "intent": "保密责任",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ121",
+      "intent_group": "IG041",
+      "intent": "密码应用方案",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ122",
+      "intent_group": "IG041",
+      "intent": "密码应用方案",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ123",
+      "intent_group": "IG041",
+      "intent": "密码应用方案",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ124",
+      "intent_group": "IG042",
+      "intent": "方案实施一致性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ125",
+      "intent_group": "IG042",
+      "intent": "方案实施一致性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ126",
+      "intent_group": "IG042",
+      "intent": "方案实施一致性",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ127",
+      "intent_group": "IG043",
+      "intent": "上线前评估",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ128",
+      "intent_group": "IG043",
+      "intent": "上线前评估",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ129",
+      "intent_group": "IG043",
+      "intent": "上线前评估",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ130",
+      "intent_group": "IG044",
+      "intent": "运行期检查",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ131",
+      "intent_group": "IG044",
+      "intent": "运行期检查",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ132",
+      "intent_group": "IG044",
+      "intent": "运行期检查",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ133",
+      "intent_group": "IG045",
+      "intent": "密钥策略落地",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ134",
+      "intent_group": "IG045",
+      "intent": "密钥策略落地",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ135",
+      "intent_group": "IG045",
+      "intent": "密钥策略落地",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ136",
+      "intent_group": "IG046",
+      "intent": "密钥泄露",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ137",
+      "intent_group": "IG046",
+      "intent": "密钥泄露",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ138",
+      "intent_group": "IG046",
+      "intent": "密钥泄露",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ139",
+      "intent_group": "IG047",
+      "intent": "证书紧急撤销",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ140",
+      "intent_group": "IG047",
+      "intent": "证书紧急撤销",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ141",
+      "intent_group": "IG047",
+      "intent": "证书紧急撤销",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ142",
+      "intent_group": "IG048",
+      "intent": "密码设备故障",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ143",
+      "intent_group": "IG048",
+      "intent": "密码设备故障",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ144",
+      "intent_group": "IG048",
+      "intent": "密码设备故障",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ145",
+      "intent_group": "IG049",
+      "intent": "事件报告",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ146",
+      "intent_group": "IG049",
+      "intent": "事件报告",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ147",
+      "intent_group": "IG049",
+      "intent": "事件报告",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ148",
+      "intent_group": "IG050",
+      "intent": "演练恢复",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ149",
+      "intent_group": "IG050",
+      "intent": "演练恢复",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    },
+    {
+      "id": "CQ150",
+      "intent_group": "IG050",
+      "intent": "演练恢复",
+      "provenance": "model_synthetic_candidate",
+      "synthetic": true,
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "source_use": "仅公开主题分类线索，非逐条摘自来源、非真实访谈频次",
+      "annotation_status": "UNREVIEWED",
+      "owner_confirmed": false
+    }
+  ]
+}

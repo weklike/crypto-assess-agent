@@ -1,0 +1,219 @@
+{
+  "date": "2026-09-25",
+  "scope": "Only delivered research-file structure and independent rational arithmetic; not project tests or formal evaluation.",
+  "queries": {
+    "count": 150,
+    "unique_ids": 150,
+    "unique_texts": 150,
+    "intent_groups": 50,
+    "style_count": {
+      "colloquial": 50,
+      "paraphrase": 50,
+      "keyword": 50
+    },
+    "gold_labeled": 0,
+    "synthetic_ratio": 1.0,
+    "structure": "PASS"
+  },
+  "arithmetic": {
+    "numeric_checked": 35,
+    "numeric_checks_passed": 35,
+    "pending_boundaries": 1,
+    "owner_reviewed": false,
+    "application_scoring_test_run": false,
+    "checks": [
+      {
+        "id": "AR01",
+        "arithmetic_check": "PASS",
+        "recomputed": "1.0000"
+      },
+      {
+        "id": "AR02",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.0000"
+      },
+      {
+        "id": "AR03",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.0000"
+      },
+      {
+        "id": "AR04",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.1000"
+      },
+      {
+        "id": "AR05",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.2500"
+      },
+      {
+        "id": "AR06",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR07",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR08",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.6000"
+      },
+      {
+        "id": "AR09",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.7500"
+      },
+      {
+        "id": "AR10",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.0500"
+      },
+      {
+        "id": "AR11",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.1250"
+      },
+      {
+        "id": "AR12",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.2500"
+      },
+      {
+        "id": "AR13",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.3000"
+      },
+      {
+        "id": "AR14",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.3750"
+      },
+      {
+        "id": "AR15",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR16",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.8000"
+      },
+      {
+        "id": "AR17",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.3000"
+      },
+      {
+        "id": "AR18",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR19",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.3333"
+      },
+      {
+        "id": "AR20",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.6667"
+      },
+      {
+        "id": "AR21",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR22",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5882"
+      },
+      {
+        "id": "AR23",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR24",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.6429"
+      },
+      {
+        "id": "AR25",
+        "arithmetic_check": "PASS",
+        "recomputed": "1.0000"
+      },
+      {
+        "id": "AR26",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.5000"
+      },
+      {
+        "id": "AR27",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.0000"
+      },
+      {
+        "id": "AR28",
+        "arithmetic_check": "PASS",
+        "recomputed": "100.00"
+      },
+      {
+        "id": "AR29",
+        "arithmetic_check": "PASS",
+        "recomputed": "0.00"
+      },
+      {
+        "id": "AR30",
+        "arithmetic_check": "PASS",
+        "recomputed": "50.00"
+      },
+      {
+        "id": "AR31",
+        "arithmetic_check": "PASS",
+        "recomputed": "6.00"
+      },
+      {
+        "id": "AR32",
+        "arithmetic_check": "PASS",
+        "recomputed": "8.00"
+      },
+      {
+        "id": "AR33",
+        "arithmetic_check": "PASS",
+        "recomputed": "50.00"
+      },
+      {
+        "id": "AR34",
+        "arithmetic_check": "PASS",
+        "recomputed": "65.00"
+      },
+      {
+        "id": "AR35",
+        "arithmetic_check": "PASS",
+        "recomputed": "43.33"
+      },
+      {
+        "id": "AR36",
+        "status": "PENDING_OWNER_DECISION",
+        "numeric_pass_claimed": false
+      }
+    ]
+  },
+  "sources_registered": 24,
+  "scenario_research_cards": 12,
+  "original_files": {
+    "PROGRESS.md": "UNCHANGED",
+    "调研方案.md": "UNCHANGED",
+    "实施计划.md": "UNCHANGED"
+  },
+  "project_tests_run": false,
+  "formal_eval_run": false,
+  "standard_normalization_run": false,
+  "qa_bank_downloaded": false,
+  "llm_api_calls": 0
+}

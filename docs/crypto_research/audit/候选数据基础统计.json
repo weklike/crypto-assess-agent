@@ -1,0 +1,24 @@
+{
+  "queries": 150,
+  "intent_groups": 50,
+  "synthetic_ratio": 1.0,
+  "styles": {
+    "colloquial": 50,
+    "paraphrase": 50,
+    "keyword": 50
+  },
+  "layers": {
+    "物理和环境": 18,
+    "网络和通信": 24,
+    "设备和计算": 21,
+    "应用和数据": 27,
+    "管理制度": 15,
+    "人员管理": 15,
+    "建设运行": 15,
+    "应急处置": 15
+  },
+  "gold_labeled_queries": 0,
+  "arithmetic_numeric_candidates": 35,
+  "arithmetic_unresolved_candidates": 1,
+  "formal_tests_run": false
+}

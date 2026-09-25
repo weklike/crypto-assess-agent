@@ -1,0 +1,1276 @@
+[
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "5.1",
+    "title": "密码算法",
+    "kind": "通用测评要求",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#5.1",
+    "indicator_clause_no": "5.1.1",
+    "indicator_ref": "GB/T 43206-2023#5.1.1",
+    "basic_locs": {
+      "1": [
+        "5 a)"
+      ],
+      "2": [
+        "5 a)"
+      ],
+      "3": [
+        "5 a)"
+      ],
+      "4": [
+        "5 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.2.1.1（印刷页11）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "5.2",
+    "title": "密码技术",
+    "kind": "通用测评要求",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#5.2",
+    "indicator_clause_no": "5.2.1",
+    "indicator_ref": "GB/T 43206-2023#5.2.1",
+    "basic_locs": {
+      "1": [
+        "5 b)"
+      ],
+      "2": [
+        "5 b)"
+      ],
+      "3": [
+        "5 b)"
+      ],
+      "4": [
+        "5 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.2.2.1（印刷页12）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "5.3",
+    "title": "密码产品",
+    "kind": "通用测评要求",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#5.3",
+    "indicator_clause_no": "5.3.1",
+    "indicator_ref": "GB/T 43206-2023#5.3.1",
+    "basic_locs": {
+      "1": [
+        "5 c)"
+      ],
+      "2": [
+        "5 c)"
+      ],
+      "3": [
+        "5 c)"
+      ],
+      "4": [
+        "5 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.3.1.1（印刷页13）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "密码产品还需按所属安全层面核查相应等级要求，不能只检查认证证书。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "5.4",
+    "title": "密码服务",
+    "kind": "通用测评要求",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#5.4",
+    "indicator_clause_no": "5.4.1",
+    "indicator_ref": "GB/T 43206-2023#5.4.1",
+    "basic_locs": {
+      "1": [
+        "5 c)"
+      ],
+      "2": [
+        "5 c)"
+      ],
+      "3": [
+        "5 c)"
+      ],
+      "4": [
+        "5 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.3.2.1（印刷页14）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "5.5",
+    "title": "密钥管理",
+    "kind": "通用测评要求",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#5.5",
+    "indicator_clause_no": "5.5.1",
+    "indicator_ref": "GB/T 43206-2023#5.5.1",
+    "basic_locs": {
+      "1": [
+        "6.7 b)"
+      ],
+      "2": [
+        "7.7 b)"
+      ],
+      "3": [
+        "8.7 b)"
+      ],
+      "4": [
+        "9.7 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.3.3.1（印刷页14）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "基本要求中的策略条款和资料性附录B为相关依据，不意味着逐字等同。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.1.1",
+    "title": "身份鉴别",
+    "kind": "测评单元",
+    "layer": "物理和环境",
+    "clause_ref": "GB/T 43206-2023#6.1.1",
+    "indicator_clause_no": "6.1.1.1",
+    "indicator_ref": "GB/T 43206-2023#6.1.1.1",
+    "basic_locs": {
+      "1": [
+        "6.1 a)"
+      ],
+      "2": [
+        "7.1 a)"
+      ],
+      "3": [
+        "8.1 a)"
+      ],
+      "4": [
+        "9.1 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.1.1（印刷页16）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.1.2",
+    "title": "电子门禁记录数据存储完整性",
+    "kind": "测评单元",
+    "layer": "物理和环境",
+    "clause_ref": "GB/T 43206-2023#6.1.2",
+    "indicator_clause_no": "6.1.2.1",
+    "indicator_ref": "GB/T 43206-2023#6.1.2.1",
+    "basic_locs": {
+      "1": [
+        "6.1 b)"
+      ],
+      "2": [
+        "7.1 b)"
+      ],
+      "3": [
+        "8.1 b)"
+      ],
+      "4": [
+        "9.1 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.1.1（印刷页16）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.1.3",
+    "title": "视频监控记录数据存储完整性",
+    "kind": "测评单元",
+    "layer": "物理和环境",
+    "clause_ref": "GB/T 43206-2023#6.1.3",
+    "indicator_clause_no": "6.1.3.1",
+    "indicator_ref": "GB/T 43206-2023#6.1.3.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.1 c)"
+      ],
+      "4": [
+        "9.1 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.1.1（印刷页16）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.2.1",
+    "title": "身份鉴别",
+    "kind": "测评单元",
+    "layer": "网络和通信",
+    "clause_ref": "GB/T 43206-2023#6.2.1",
+    "indicator_clause_no": "6.2.1.1",
+    "indicator_ref": "GB/T 43206-2023#6.2.1.1",
+    "basic_locs": {
+      "1": [
+        "6.2 a)"
+      ],
+      "2": [
+        "7.2 a)"
+      ],
+      "3": [
+        "8.2 a)"
+      ],
+      "4": [
+        "9.2 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.2.1（印刷页17）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.2.2",
+    "title": "通信数据完整性",
+    "kind": "测评单元",
+    "layer": "网络和通信",
+    "clause_ref": "GB/T 43206-2023#6.2.2",
+    "indicator_clause_no": "6.2.2.1",
+    "indicator_ref": "GB/T 43206-2023#6.2.2.1",
+    "basic_locs": {
+      "1": [
+        "6.2 b)"
+      ],
+      "2": [
+        "7.2 b)"
+      ],
+      "3": [
+        "8.2 b)"
+      ],
+      "4": [
+        "9.2 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.2.1（印刷页17）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.2.3",
+    "title": "通信过程中重要数据的机密性",
+    "kind": "测评单元",
+    "layer": "网络和通信",
+    "clause_ref": "GB/T 43206-2023#6.2.3",
+    "indicator_clause_no": "6.2.3.1",
+    "indicator_ref": "GB/T 43206-2023#6.2.3.1",
+    "basic_locs": {
+      "1": [
+        "6.2 c)"
+      ],
+      "2": [
+        "7.2 c)"
+      ],
+      "3": [
+        "8.2 c)"
+      ],
+      "4": [
+        "9.2 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.2.1（印刷页17）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.2.4",
+    "title": "网络边界访问控制信息的完整性",
+    "kind": "测评单元",
+    "layer": "网络和通信",
+    "clause_ref": "GB/T 43206-2023#6.2.4",
+    "indicator_clause_no": "6.2.4.1",
+    "indicator_ref": "GB/T 43206-2023#6.2.4.1",
+    "basic_locs": {
+      "1": [
+        "6.2 d)"
+      ],
+      "2": [
+        "7.2 d)"
+      ],
+      "3": [
+        "8.2 d)"
+      ],
+      "4": [
+        "9.2 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.2.1（印刷页17）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.2.5",
+    "title": "安全接入认证",
+    "kind": "测评单元",
+    "layer": "网络和通信",
+    "clause_ref": "GB/T 43206-2023#6.2.5",
+    "indicator_clause_no": "6.2.5.1",
+    "indicator_ref": "GB/T 43206-2023#6.2.5.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.2 e)"
+      ],
+      "4": [
+        "9.2 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.2.1（印刷页17）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.1",
+    "title": "身份鉴别",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.1",
+    "indicator_clause_no": "6.3.1.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.1.1",
+    "basic_locs": {
+      "1": [
+        "6.3 a)"
+      ],
+      "2": [
+        "7.3 a)"
+      ],
+      "3": [
+        "8.3 a)"
+      ],
+      "4": [
+        "9.3 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.2",
+    "title": "远程管理通道安全",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.2",
+    "indicator_clause_no": "6.3.2.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.2.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.3 b)"
+      ],
+      "4": [
+        "9.3 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.3",
+    "title": "系统资源访问控制信息完整性",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.3",
+    "indicator_clause_no": "6.3.3.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.3.1",
+    "basic_locs": {
+      "1": [
+        "6.3 b)"
+      ],
+      "2": [
+        "7.3 b)"
+      ],
+      "3": [
+        "8.3 c)"
+      ],
+      "4": [
+        "9.3 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.4",
+    "title": "重要信息资源安全标记完整性",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.4",
+    "indicator_clause_no": "6.3.4.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.4.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.3 d)"
+      ],
+      "4": [
+        "9.3 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.5",
+    "title": "日志记录完整性",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.5",
+    "indicator_clause_no": "6.3.5.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.5.1",
+    "basic_locs": {
+      "1": [
+        "6.3 c)"
+      ],
+      "2": [
+        "7.3 c)"
+      ],
+      "3": [
+        "8.3 e)"
+      ],
+      "4": [
+        "9.3 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.3.6",
+    "title": "重要可执行程序完整性、重要可执行程序来源真实性",
+    "kind": "测评单元",
+    "layer": "设备和计算",
+    "clause_ref": "GB/T 43206-2023#6.3.6",
+    "indicator_clause_no": "6.3.6.1",
+    "indicator_ref": "GB/T 43206-2023#6.3.6.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.3 f)"
+      ],
+      "4": [
+        "9.3 f)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.3.1（印刷页19）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.1",
+    "title": "身份鉴别",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.1",
+    "indicator_clause_no": "6.4.1.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.1.1",
+    "basic_locs": {
+      "1": [
+        "6.4 a)"
+      ],
+      "2": [
+        "7.4 a)"
+      ],
+      "3": [
+        "8.4 a)"
+      ],
+      "4": [
+        "9.4 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.2",
+    "title": "访问控制信息完整性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.2",
+    "indicator_clause_no": "6.4.2.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.2.1",
+    "basic_locs": {
+      "1": [
+        "6.4 b)"
+      ],
+      "2": [
+        "7.4 b)"
+      ],
+      "3": [
+        "8.4 b)"
+      ],
+      "4": [
+        "9.4 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.3",
+    "title": "重要信息资源安全标记完整性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.3",
+    "indicator_clause_no": "6.4.3.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.3.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.4 c)"
+      ],
+      "4": [
+        "9.4 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.4",
+    "title": "重要数据传输机密性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.4",
+    "indicator_clause_no": "6.4.4.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.4.1",
+    "basic_locs": {
+      "1": [
+        "6.4 c)"
+      ],
+      "2": [
+        "7.4 c)"
+      ],
+      "3": [
+        "8.4 d)"
+      ],
+      "4": [
+        "9.4 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.5",
+    "title": "重要数据存储机密性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.5",
+    "indicator_clause_no": "6.4.5.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.5.1",
+    "basic_locs": {
+      "1": [
+        "6.4 d)"
+      ],
+      "2": [
+        "7.4 d)"
+      ],
+      "3": [
+        "8.4 e)"
+      ],
+      "4": [
+        "9.4 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.6",
+    "title": "重要数据传输完整性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.6",
+    "indicator_clause_no": "6.4.6.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.6.1",
+    "basic_locs": {
+      "1": [
+        "6.4 e)"
+      ],
+      "2": [
+        "7.4 e)"
+      ],
+      "3": [
+        "8.4 f)"
+      ],
+      "4": [
+        "9.4 f)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.7",
+    "title": "重要数据存储完整性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.7",
+    "indicator_clause_no": "6.4.7.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.7.1",
+    "basic_locs": {
+      "1": [
+        "6.4 f)"
+      ],
+      "2": [
+        "7.4 f)"
+      ],
+      "3": [
+        "8.4 g)"
+      ],
+      "4": [
+        "9.4 g)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "6.4.8",
+    "title": "不可否认性",
+    "kind": "测评单元",
+    "layer": "应用和数据",
+    "clause_ref": "GB/T 43206-2023#6.4.8",
+    "indicator_clause_no": "6.4.8.1",
+    "indicator_ref": "GB/T 43206-2023#6.4.8.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.4 h)"
+      ],
+      "4": [
+        "9.4 h)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "8.4.1（印刷页21）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.1",
+    "title": "密码应用安全管理制度",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.1",
+    "indicator_clause_no": "7.1.1.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.1.1",
+    "basic_locs": {
+      "1": [
+        "6.5 a)"
+      ],
+      "2": [
+        "7.5 a)"
+      ],
+      "3": [
+        "8.5 a)"
+      ],
+      "4": [
+        "9.5 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.1.1（印刷页26）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.2",
+    "title": "密钥管理规则",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.2",
+    "indicator_clause_no": "7.1.2.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.2.1",
+    "basic_locs": {
+      "1": [
+        "6.5 b)"
+      ],
+      "2": [
+        "7.5 b)"
+      ],
+      "3": [
+        "8.5 b)"
+      ],
+      "4": [
+        "9.5 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.2.1（印刷页26）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.3",
+    "title": "操作规程",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.3",
+    "indicator_clause_no": "7.1.3.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.3.1",
+    "basic_locs": {
+      "1": [],
+      "2": [
+        "7.5 c)"
+      ],
+      "3": [
+        "8.5 c)"
+      ],
+      "4": [
+        "9.5 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.3.1（印刷页27）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.4",
+    "title": "安全管理制度",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.4",
+    "indicator_clause_no": "7.1.4.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.4.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.5 d)"
+      ],
+      "4": [
+        "9.5 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.4.1（印刷页27）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "本单元关注制度的论证、审定与修订；保留标准原有标题。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.5",
+    "title": "管理制度发布流程",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.5",
+    "indicator_clause_no": "7.1.5.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.5.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.5 e)"
+      ],
+      "4": [
+        "9.5 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.5.1（印刷页28）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.1.6",
+    "title": "制度执行过程记录",
+    "kind": "测评单元",
+    "layer": "管理制度",
+    "clause_ref": "GB/T 43206-2023#7.1.6",
+    "indicator_clause_no": "7.1.6.1",
+    "indicator_ref": "GB/T 43206-2023#7.1.6.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.5 f)"
+      ],
+      "4": [
+        "9.5 f)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.1.6.1（印刷页28）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.2.1",
+    "title": "密码相关法律法规和密码管理制度",
+    "kind": "测评单元",
+    "layer": "人员管理",
+    "clause_ref": "GB/T 43206-2023#7.2.1",
+    "indicator_clause_no": "7.2.1.1",
+    "indicator_ref": "GB/T 43206-2023#7.2.1.1",
+    "basic_locs": {
+      "1": [
+        "6.6 a)"
+      ],
+      "2": [
+        "7.6 a)"
+      ],
+      "3": [
+        "8.6 a)"
+      ],
+      "4": [
+        "9.6 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.2.1.1（印刷页29）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.2.2",
+    "title": "密码应用岗位责任制度",
+    "kind": "测评单元",
+    "layer": "人员管理",
+    "clause_ref": "GB/T 43206-2023#7.2.2",
+    "indicator_clause_no": "7.2.2.1",
+    "indicator_ref": "GB/T 43206-2023#7.2.2.1",
+    "basic_locs": {
+      "1": [],
+      "2": [
+        "7.6 b)"
+      ],
+      "3": [
+        "8.6 b)"
+      ],
+      "4": [
+        "9.6 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.2.2.1（印刷页29）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.2.3",
+    "title": "上岗人员培训制度",
+    "kind": "测评单元",
+    "layer": "人员管理",
+    "clause_ref": "GB/T 43206-2023#7.2.3",
+    "indicator_clause_no": "7.2.3.1",
+    "indicator_ref": "GB/T 43206-2023#7.2.3.1",
+    "basic_locs": {
+      "1": [],
+      "2": [
+        "7.6 c)"
+      ],
+      "3": [
+        "8.6 c)"
+      ],
+      "4": [
+        "9.6 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.2.3.1（印刷页31）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.2.4",
+    "title": "安全岗位考核",
+    "kind": "测评单元",
+    "layer": "人员管理",
+    "clause_ref": "GB/T 43206-2023#7.2.4",
+    "indicator_clause_no": "7.2.4.1",
+    "indicator_ref": "GB/T 43206-2023#7.2.4.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.6 d)"
+      ],
+      "4": [
+        "9.6 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.2.4.1（印刷页31）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.2.5",
+    "title": "关键岗位人员保密制度",
+    "kind": "测评单元",
+    "layer": "人员管理",
+    "clause_ref": "GB/T 43206-2023#7.2.5",
+    "indicator_clause_no": "7.2.5.1",
+    "indicator_ref": "GB/T 43206-2023#7.2.5.1",
+    "basic_locs": {
+      "1": [
+        "6.6 b)"
+      ],
+      "2": [
+        "7.6 d)"
+      ],
+      "3": [
+        "8.6 e)"
+      ],
+      "4": [
+        "9.6 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.2.5.1（印刷页32）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "一级对应离岗权限终止要求；二至四级涉及关键岗位保密与调离，不能将不同等级内容等同。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.3.1",
+    "title": "密码应用方案",
+    "kind": "测评单元",
+    "layer": "建设运行",
+    "clause_ref": "GB/T 43206-2023#7.3.1",
+    "indicator_clause_no": "7.3.1.1",
+    "indicator_ref": "GB/T 43206-2023#7.3.1.1",
+    "basic_locs": {
+      "1": [
+        "6.7 a)"
+      ],
+      "2": [
+        "7.7 a)"
+      ],
+      "3": [
+        "8.7 a)"
+      ],
+      "4": [
+        "9.7 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.3.1.1（印刷页33）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.3.2",
+    "title": "密钥安全管理策略",
+    "kind": "测评单元",
+    "layer": "建设运行",
+    "clause_ref": "GB/T 43206-2023#7.3.2",
+    "indicator_clause_no": "7.3.2.1",
+    "indicator_ref": "GB/T 43206-2023#7.3.2.1",
+    "basic_locs": {
+      "1": [
+        "6.7 b)"
+      ],
+      "2": [
+        "7.7 b)"
+      ],
+      "3": [
+        "8.7 b)"
+      ],
+      "4": [
+        "9.7 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.3.2.1（印刷页33）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.3.3",
+    "title": "实施方案",
+    "kind": "测评单元",
+    "layer": "建设运行",
+    "clause_ref": "GB/T 43206-2023#7.3.3",
+    "indicator_clause_no": "7.3.3.1",
+    "indicator_ref": "GB/T 43206-2023#7.3.3.1",
+    "basic_locs": {
+      "1": [
+        "6.7 c)"
+      ],
+      "2": [
+        "7.7 c)"
+      ],
+      "3": [
+        "8.7 c)"
+      ],
+      "4": [
+        "9.7 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.3.3.1（印刷页34）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.3.4",
+    "title": "投入运行前的密码应用安全性评估",
+    "kind": "测评单元",
+    "layer": "建设运行",
+    "clause_ref": "GB/T 43206-2023#7.3.4",
+    "indicator_clause_no": "7.3.4.1",
+    "indicator_ref": "GB/T 43206-2023#7.3.4.1",
+    "basic_locs": {
+      "1": [
+        "6.7 d)"
+      ],
+      "2": [
+        "7.7 d)"
+      ],
+      "3": [
+        "8.7 d)"
+      ],
+      "4": [
+        "9.7 d)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.3.4.1（印刷页34）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.3.5",
+    "title": "投入运行后的密码应用安全性评估",
+    "kind": "测评单元",
+    "layer": "建设运行",
+    "clause_ref": "GB/T 43206-2023#7.3.5",
+    "indicator_clause_no": "7.3.5.1",
+    "indicator_ref": "GB/T 43206-2023#7.3.5.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.7 e)"
+      ],
+      "4": [
+        "9.7 e)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.3.5.1（印刷页35）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.4.1",
+    "title": "应急策略",
+    "kind": "测评单元",
+    "layer": "应急处置",
+    "clause_ref": "GB/T 43206-2023#7.4.1",
+    "indicator_clause_no": "7.4.1.1",
+    "indicator_ref": "GB/T 43206-2023#7.4.1.1",
+    "basic_locs": {
+      "1": [
+        "6.8"
+      ],
+      "2": [
+        "7.8"
+      ],
+      "3": [
+        "8.8 a)"
+      ],
+      "4": [
+        "9.8 a)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.4.1.1（印刷页35）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "6.8、7.8没有字母列项，不人为补写a)。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.4.2",
+    "title": "事件处置",
+    "kind": "测评单元",
+    "layer": "应急处置",
+    "clause_ref": "GB/T 43206-2023#7.4.2",
+    "indicator_clause_no": "7.4.2.1",
+    "indicator_ref": "GB/T 43206-2023#7.4.2.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.8 b)"
+      ],
+      "4": [
+        "9.8 b)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.4.2.1（印刷页36）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": "事件发生后的报告要求；三级、四级报告对象应分别核对。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "7.4.3",
+    "title": "处置情况上报",
+    "kind": "测评单元",
+    "layer": "应急处置",
+    "clause_ref": "GB/T 43206-2023#7.4.3",
+    "indicator_clause_no": "7.4.3.1",
+    "indicator_ref": "GB/T 43206-2023#7.4.3.1",
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [
+        "8.8 c)"
+      ],
+      "4": [
+        "9.8 c)"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "9.4.3.1（印刷页37）",
+    "number_verification": "指标编号由S05对S的明确交叉引用核对；对应单元为其父级编号",
+    "remarks": ""
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "4",
+    "title": "通则",
+    "kind": "适用性与结构说明",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#4",
+    "indicator_clause_no": null,
+    "indicator_ref": null,
+    "basic_locs": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "标准目录；不得视作独立测评单元",
+    "number_verification": "标准章节目录与S05明确引用核对",
+    "remarks": "两标准第4章用途不同；此处只作为整体定位，未声称内容逐项等同。"
+  },
+  {
+    "standard_no": "GB/T 43206-2023",
+    "clause_no": "A",
+    "title": "密钥生存周期管理检查要点",
+    "kind": "资料性附录",
+    "layer": "通用",
+    "clause_ref": "GB/T 43206-2023#A",
+    "indicator_clause_no": null,
+    "indicator_ref": null,
+    "basic_locs": {
+      "1": [
+        "B"
+      ],
+      "2": [
+        "B"
+      ],
+      "3": [
+        "B"
+      ],
+      "4": [
+        "B"
+      ]
+    },
+    "evidence_source_id": "S05",
+    "evidence_locator": "7.3.3、9.3.2（分别引用GB/T43206附录A）",
+    "number_verification": "标准章节目录与S05明确引用核对",
+    "remarks": "资料性附录不可单独当作计分单元。对应GB/T39786附录B是主题联系，不是逐条等同。"
+  }
+]

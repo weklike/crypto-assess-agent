@@ -1,0 +1,674 @@
+format: research-arithmetic-review-v1
+not_application_golden: true
+formal_evaluation: false
+source_document: S08
+all_cases_synthetic: true
+numeric_cases: 35
+unresolved_cases: 1
+cases:
+- id: AR01
+  name: D1A1K1，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: true
+    K: true
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '1.0000'
+  derivation: D=A=K=1 → 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR02
+  name: D0A1K1，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: false
+    A: true
+    K: true
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '0.0000'
+  derivation: D=0 → 0
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR03
+  name: D0A0K0，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: false
+    A: false
+    K: false
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '0.0000'
+  derivation: D=0 → 0
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR04
+  name: D1A0K1，Ra=.2，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: true
+    Ra: '.2'
+    Rk: '1'
+  candidate_expected: '0.1000'
+  derivation: 0.5 × .2
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR05
+  name: D1A0K1，Ra=.5，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: true
+    Ra: '.5'
+    Rk: '1'
+  candidate_expected: '0.2500'
+  derivation: 0.5 × .5
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR06
+  name: D1A0K1，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: true
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '0.5000'
+  derivation: 0.5 × 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR07
+  name: D1A1K0，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: true
+    K: false
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '0.5000'
+  derivation: 0.5 × 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR08
+  name: D1A1K0，Ra=1，Rk=1.2
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: true
+    K: false
+    Ra: '1'
+    Rk: '1.2'
+  candidate_expected: '0.6000'
+  derivation: 0.5 × 1.2
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR09
+  name: D1A1K0，Ra=1，Rk=1.5
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: true
+    K: false
+    Ra: '1'
+    Rk: '1.5'
+  candidate_expected: '0.7500'
+  derivation: 0.5 × 1.5
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR10
+  name: D1A0K0，Ra=.2，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: false
+    Ra: '.2'
+    Rk: '1'
+  candidate_expected: '0.0500'
+  derivation: 0.25 × .2 × 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR11
+  name: D1A0K0，Ra=.5，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: false
+    Ra: '.5'
+    Rk: '1'
+  candidate_expected: '0.1250'
+  derivation: 0.25 × .5 × 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR12
+  name: D1A0K0，Ra=1，Rk=1
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: false
+    Ra: '1'
+    Rk: '1'
+  candidate_expected: '0.2500'
+  derivation: 0.25 × 1 × 1
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR13
+  name: D1A0K0，Ra=1，Rk=1.2
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: false
+    Ra: '1'
+    Rk: '1.2'
+  candidate_expected: '0.3000'
+  derivation: 0.25 × 1 × 1.2
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR14
+  name: D1A0K0，Ra=1，Rk=1.5
+  kind: object_dak
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    D: true
+    A: false
+    K: false
+    Ra: '1'
+    Rk: '1.5'
+  candidate_expected: '0.3750'
+  derivation: 0.25 × 1 × 1.5
+  review_note: Ra/Rk取值的实际适用条件须另行核验；1.2/1.5不能无条件选用。
+- id: AR15
+  name: 经确认的弥补：A=1，B=0
+  kind: compensation
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    PA: '1'
+    PB: '0'
+    compensation_confirmed_assumption: true
+  candidate_expected: '0.5000'
+  derivation: max(0.5×1,0)
+  review_note: 测试以弥补关系已被专业人员确认作为假设；不能仅凭分数建立弥补关系。
+- id: AR16
+  name: 经确认的弥补：A=1，B=.8
+  kind: compensation
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    PA: '1'
+    PB: '.8'
+    compensation_confirmed_assumption: true
+  candidate_expected: '0.8000'
+  derivation: max(0.5×1,.8)
+  review_note: 测试以弥补关系已被专业人员确认作为假设；不能仅凭分数建立弥补关系。
+- id: AR17
+  name: 经确认的弥补：A=.6，B=.1
+  kind: compensation
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    PA: '.6'
+    PB: '.1'
+    compensation_confirmed_assumption: true
+  candidate_expected: '0.3000'
+  derivation: max(0.5×.6,.1)
+  review_note: 测试以弥补关系已被专业人员确认作为假设；不能仅凭分数建立弥补关系。
+- id: AR18
+  name: 测评单元对象平均：1,0
+  kind: unit_mean
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    object_scores:
+    - '1'
+    - '0'
+  candidate_expected: '0.5000'
+  derivation: sum(scores)/n，结果四舍五入4位
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR19
+  name: 测评单元对象平均：1,0,0
+  kind: unit_mean
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    object_scores:
+    - '1'
+    - '0'
+    - '0'
+  candidate_expected: '0.3333'
+  derivation: sum(scores)/n，结果四舍五入4位
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR20
+  name: 测评单元对象平均：1,1,0
+  kind: unit_mean
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    object_scores:
+    - '1'
+    - '1'
+    - '0'
+  candidate_expected: '0.6667'
+  derivation: sum(scores)/n，结果四舍五入4位
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR21
+  name: 测评单元对象平均：1,.5,0
+  kind: unit_mean
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    object_scores:
+    - '1'
+    - '.5'
+    - '0'
+  candidate_expected: '0.5000'
+  derivation: sum(scores)/n，结果四舍五入4位
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR22
+  name: 层面加权：1,0
+  kind: layer_weighted
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    unit_scores:
+    - '1'
+    - '0'
+    unit_weights:
+    - '1'
+    - '.7'
+  candidate_expected: '0.5882'
+  derivation: sum(score×weight)/sum(weight)，四舍五入4位
+  review_note: 这是代数验证；未声称这组抽象单元对应某个真实等级或标准条款。
+- id: AR23
+  name: 层面加权：1,0
+  kind: layer_weighted
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    unit_scores:
+    - '1'
+    - '0'
+    unit_weights:
+    - '1'
+    - '1'
+  candidate_expected: '0.5000'
+  derivation: sum(score×weight)/sum(weight)，四舍五入4位
+  review_note: 这是代数验证；未声称这组抽象单元对应某个真实等级或标准条款。
+- id: AR24
+  name: 层面加权：1,.5,0
+  kind: layer_weighted
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    unit_scores:
+    - '1'
+    - '.5'
+    - '0'
+    unit_weights:
+    - '1'
+    - '.7'
+    - '.4'
+  candidate_expected: '0.6429'
+  derivation: sum(score×weight)/sum(weight)，四舍五入4位
+  review_note: 这是代数验证；未声称这组抽象单元对应某个真实等级或标准条款。
+- id: AR25
+  name: 管理测评单元：符合
+  kind: management_unit
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    judgment: 符合
+  candidate_expected: '1.0000'
+  derivation: 管理测评单元的固定判定分值
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR26
+  name: 管理测评单元：部分符合
+  kind: management_unit
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    judgment: 部分符合
+  candidate_expected: '0.5000'
+  derivation: 管理测评单元的固定判定分值
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR27
+  name: 管理测评单元：不符合
+  kind: management_unit
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    judgment: 不符合
+  candidate_expected: '0.0000'
+  derivation: 管理测评单元的固定判定分值
+  review_note: 只核算术；不代表实际对象的D/A/K与适用性已获确认。
+- id: AR28
+  name: 八层面均满分
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '1'
+      网络和通信: '1'
+      设备和计算: '1'
+      应用和数据: '1'
+      管理制度: '1'
+      人员管理: '1'
+      建设运行: '1'
+      应急处置: '1'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '100.00'
+  derivation: 70 + 30 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR29
+  name: 八层面均零分
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '0'
+      网络和通信: '0'
+      设备和计算: '0'
+      应用和数据: '0'
+      管理制度: '0'
+      人员管理: '0'
+      建设运行: '0'
+      应急处置: '0'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '0.00'
+  derivation: 0 + 0 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR30
+  name: 八层面均半分
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '.5'
+      网络和通信: '.5'
+      设备和计算: '.5'
+      应用和数据: '.5'
+      管理制度: '.5'
+      人员管理: '.5'
+      建设运行: '.5'
+      应急处置: '.5'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '50.00'
+  derivation: 35.0 + 15.0 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR31
+  name: 仅应急层面满分，其余为零
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '0'
+      网络和通信: '0'
+      设备和计算: '0'
+      应用和数据: '0'
+      管理制度: '0'
+      人员管理: '0'
+      建设运行: '0'
+      应急处置: '1'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '6.00'
+  derivation: 0 + 6.0 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR32
+  name: 仅管理制度满分，其余为零
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '0'
+      网络和通信: '0'
+      设备和计算: '0'
+      应用和数据: '0'
+      管理制度: '1'
+      人员管理: '0'
+      建设运行: '0'
+      应急处置: '0'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '8.00'
+  derivation: 0 + 8.000000000000000000000000001 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR33
+  name: 物理层面不适用，其余均半分
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: null
+      网络和通信: '.5'
+      设备和计算: '.5'
+      应用和数据: '.5'
+      管理制度: '.5'
+      人员管理: '.5'
+      建设运行: '.5'
+      应急处置: '.5'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '50.00'
+  derivation: 35.0 + 15.0 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR34
+  name: 三个管理层面不适用，技术半分，应急满分
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '.5'
+      网络和通信: '.5'
+      设备和计算: '.5'
+      应用和数据: '.5'
+      管理制度: null
+      人员管理: null
+      建设运行: null
+      应急处置: '1'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '65.00'
+  derivation: 35.0 + 30 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR35
+  name: 验证总分两位舍入
+  kind: total
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: '.3333'
+      网络和通信: '.3333'
+      设备和计算: '.3333'
+      应用和数据: '.3333'
+      管理制度: '.6667'
+      人员管理: '.6667'
+      建设运行: '.6667'
+      应急处置: '.6667'
+    layer_weights:
+      物理和环境: '10'
+      网络和通信: '20'
+      设备和计算: '10'
+      应用和数据: '30'
+      管理制度: '8'
+      人员管理: '8'
+      建设运行: '8'
+      应急处置: '6'
+  candidate_expected: '43.33'
+  derivation: 23.3310 + 20.0010 → 四舍五入2位
+  review_note: None仅在本候选格式中表示已论证的不适用层面；不是未采集或未知。
+- id: AR36
+  name: 技术或管理组全部不适用导致分母为零
+  kind: undefined_boundary
+  synthetic: true
+  owner_confirmed: false
+  source_ids:
+  - S08
+  inputs:
+    layer_scores:
+      物理和环境: null
+      网络和通信: null
+      设备和计算: null
+      应用和数据: null
+      管理制度: null
+      人员管理: null
+      建设运行: null
+      应急处置: null
+  candidate_expected: null
+  derivation: 0分母；不猜测数值
+  review_note: 官方公式未明确覆盖该输入；建议阻止自动总分并交所有者决定，不能标为官方golden通过。

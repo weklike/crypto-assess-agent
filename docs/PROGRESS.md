@@ -1,6 +1,6 @@
 # PROGRESS
 
-最后更新：2026-09-25
+最后更新：2026-11-04
 
 ## 任务状态
 
@@ -32,6 +32,7 @@
 | T21 前端二期 | 部分完成 | 2026-09-25 | 2026-09-25 验收反馈修改：检索页无查询时分页浏览条款（新接口 /api/kb/clauses/page）、Top K 说明、结果分页；时间统一北京时间 24 小时制；复核表加宽并可展开，测评维度表头加说明（前端测试 34 个）；`npm --prefix frontend run test` 19 个测试通过（新增轮询、差距项筛选、评估详情组件），`npm --prefix frontend run build` 通过；评估项目页：项目列表与新建、按类别录入密码措施、启动/继续分析与轮询、差距项筛选/改判/备注/确认、全部确认后评分、下载报告；2026-09-25 增加 D/A/K 勾选、Ra/Rk 选择、缺参数提示、不出总分原因（测试共 25 个） | 用模拟系统从新建走到下载报告的录屏需要仓库所有者完成（真实分析需要 LLM_API_KEY） |
 | T22 全量评测重跑与总报告 | 受阻 | | 运行器已就绪：`--eval.suite=summary` 依次跑 retrieval、qa、gap、scoring 并生成链接各子报告的总报告（SummaryEvalSuiteTest），`--eval.suite=scoring` 比对 golden 用例（ScoringEvalSuiteTest）；`./mvnw verify` 全绿（2026-09-25）：单元测试 350、集成测试 75 | 依赖仓库所有者完成：规范化标准、评测集 v1、题库样本、模拟系统（评分规则与 golden 已核对，scoring 套件可单独运行） |
 | T23 README、演示与简历数字 | 部分完成 | 2026-09-24 | README（定位与免责、架构图、快速开始、MCP 接入、评测命令、限制）、docs/demo-script.md、docs/interview-qa.md（10 题）、docs/resume-numbers.md（模板，未填未测数字）；本机按 README 起 core profile 五个服务 healthy，导入（无 Key 401 / admin Key 200）、重建索引、检索、MCP 401 均符合预期 | 干净环境复现、演示录屏、简历数字需仓库所有者在正式评测后完成 |
+| 前端视觉改版（任务卡外，仓库所有者 2026-11-04 批准） | 已完成 | 2026-11-04 | `npm --prefix frontend run test` 51 个通过（原有 34 个未改，新增 theme、display、App 共 17 个）；`npm --prefix frontend run build` 通过（vue-tsc 无错误）；用 fixtures 仿标准与模拟接口数据截图核对亮/暗两套、1440 与 1280 宽度，问答、检索、评估（待复核、已评分、分析失败、草稿）、条款抽屉、添加对象弹窗均无报错与遮挡 | 顶部导航 + 地址栏 hash、设计令牌与暗色模式、状态徽标、评估阶段条、指标卡、得分面板；新增直接依赖 @element-plus/icons-vue（原已随 element-plus 安装）。打包体积 JS 1,049 kB、CSS 397 kB，超过 500 kB 的警告依旧（见“以后再说”） |
 
 ## 最新评测结果
 
